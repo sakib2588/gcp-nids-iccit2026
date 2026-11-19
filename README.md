@@ -2,7 +2,7 @@
 
 Code, split construction, configurations and per-run results for the paper
 
-> N. Sakib, M. S. H. Sarker, S. Hassan, O. Bhuiyan, S. D. Joy and S. Paul, "Covariance Pooling Beats
+> N. Sakib, M. S. H. Sarker, S. Hassan, M. O. F. Bhuiyan, S. D. Joy and S. Paul, "Covariance Pooling Beats
 > Mean but Not Max Pooling on Tabular NetFlow: A Mechanistic and Cross-Dataset Study," in *Proc. 29th
 > International Conference on Computer and Information Technology (ICCIT)*, Cox's Bazar, Bangladesh, 2026.
 
