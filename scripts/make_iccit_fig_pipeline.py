@@ -105,7 +105,7 @@ box(28.4, TOP_Y, 23, TOP_H, "Split $+$ scale",
 arrow(51.4, TOP_Y + TOP_H / 2, 54.8, TOP_Y + TOP_H / 2)
 
 stage(57.8, 96.5, "3")
-box(54.8, TOP_Y, 25, TOP_H, "CNN or TCN\nbackbone $+$ one head",
+box(54.8, TOP_Y, 25, TOP_H, "CNN, TCN or MLP\nbackbone $+$ one head",
     "16-32-32 conv, kernel 3\nGAP / GMP / SE / GCP\nlinear head, Adam, 20 ep")
 
 # The model stage feeds each evaluation arm (4, 5, 6).
@@ -136,7 +136,7 @@ ax.text(gx0 + 4 * (cw + gx) + 1.2, gy0 - 1.5 * (ch + gy), "4 held-out\ndatasets\
 
 legend_entries = [(head_labels[h], HEAD_COLOR[h]) for h in heads]
 swatch_legend(6, BOT_Y + 8.6, legend_entries, gap=9.5)
-ax.text(25.5, BOT_Y + 3.8, "$+$ TCN repeat, 40-epoch retrain (headline corpus)",
+ax.text(25.5, BOT_Y + 3.8, "$+$ TCN and MLP repeats, 40-epoch retrain (headline corpus)",
         ha="center", va="center", fontsize=6.8, color="#333333")
 
 arrow(49.4, BOT_Y + 11, 52.0, BOT_Y + 11)

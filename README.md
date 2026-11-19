@@ -9,7 +9,7 @@ Code, split construction, configurations and per-run results for the paper
 The paper trains matched 1D convolutional backbones that differ only in their pooling head
 (global average pooling GAP, global max pooling GMP, squeeze-and-excitation SE, and iSQRT-COV global
 covariance pooling GCP) on four NetFlow-v2 datasets, and compares them in-distribution, under
-leave-one-dataset-out shift, on a dilated residual TCN backbone, and on synthetic data that isolates
+leave-one-dataset-out shift, on two alternative backbones (a dilated residual TCN and an MLP-Mixer), and on synthetic data that isolates
 covariance from mean signal.
 
 Every number in the paper comes from a JSON file in `results/`. The tables and figures can be rebuilt
@@ -83,6 +83,7 @@ otherwise.
 | Training | Adam, learning rate 1e-3, batch 512, 20 epochs, cross-entropy, binary attack/benign labels |
 | Model selection | checkpoint with the best validation macro-F1; the test split is read once |
 | TCN | three residual blocks of two kernel-3 convolutions, widths 16-32-32, dilations 1, 2, 4, same padding (L' = F) |
+| MLP | MLP-Mixer without convolution: a 32-channel embedding per feature, two blocks mixing across features and across channels (L' = F) |
 | Statistics | paired Student-t 95% intervals over seeds, Cohen's d_z; a difference is resolved when \|d_z\| > 1.242 (t₀.₉₇₅,₄/√5) |
 
 ## Re-running the experiments (GPU)
@@ -95,9 +96,10 @@ for its options.
 | Table I, GAP/SE/GCP on NF-UNSW-NB15-v2 | `results/repro/` | `scripts/run_repro_t6b.py` |
 | Table I, GAP/SE/GCP on CSE-CIC-IDS2018 and ToN-IoT | `results/gateC/` | `scripts/run_gateC_headline.py` |
 | Table I, all heads on BoT-IoT | `results/botredo/` | `scripts/run_botiot_same_driver.py` |
-| Table I, GMP; GMP-wide control | `results/maxpool/` | `scripts/run_maxpool_control.py` (`--heads gmp_wide` for the width-matched control) |
+| Table I, GMP; GMP-wide control (all four corpora) | `results/maxpool/` | `scripts/run_maxpool_control.py` (`--heads gmp_wide` for the width-matched control) |
 | Table I, gradient-boosted tree | `results/tree_baseline/` | `scripts/run_tree_baseline.py` |
 | Table II, TCN rows | `results/reviewer_tcn/` | `reviewer_runs_2026-11-18/run_alt_arch.py --backbone tcn` (`run_all_alt_arch.sh` loops heads and seeds) |
+| Table II, MLP rows | `results/reviewer_mlp/` | `reviewer_runs_2026-11-18/run_alt_arch.py --backbone mlp` |
 | Table III top, leave-one-dataset-out | `results/gap1/`, `results/gap1_gmp_legacy/`, `results/gap1_repro_check/` | `scripts/run_gap1.py` (GMP cells with `--legacy-protocol`) |
 | Table III bottom, synthetic sweeps | `results/gateB_synthetic_n40k/`, `results/gateB_synthetic_far/` | `scripts/run_gateB_synthetic.py` |
 | 40-epoch budget check | `results/sens40/` | `scripts/run_maxpool_control.py --epochs 40 --results-dir results/sens40` |
