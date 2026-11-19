@@ -1,0 +1,89 @@
+{
+  "dataset": "NF-UNSW-NB15-v2",
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1337
+  ],
+  "n_eval": 500,
+  "attribution": "gradient-x-activation channel attribution (Grad-CAM style) in GCP-layer channel space; NOT input-feature SHAP",
+  "pair_definition": "top pairs = all C(5,2)=10 mutual pairs among the top-5 attributed channels; random baseline = 10 off-diagonal (a!=b) random channel pairs; concentration ratio computed WITHIN each model",
+  "per_seed": [
+    {
+      "seed": 42,
+      "top_pair_cov_gcp": 0.6587953969836235,
+      "random_pair_cov_gcp": 0.13799990098923445,
+      "top_pair_cov_gap_featuremap": 0.5357207930646837,
+      "top_pair_cov_gcp_shuffled": 0.013862694969429868,
+      "random_pair_cov_gcp_shuffled": 0.009027364836276775,
+      "concentration_real": 4.773883113401777,
+      "concentration_shuffled": 1.5356302997439688
+    },
+    {
+      "seed": 123,
+      "top_pair_cov_gcp": 0.17568598613142966,
+      "random_pair_cov_gcp": 0.16357363518327475,
+      "top_pair_cov_gap_featuremap": 0.5428859684616327,
+      "top_pair_cov_gcp_shuffled": 0.1347480323165655,
+      "random_pair_cov_gcp_shuffled": 0.07133018840104341,
+      "concentration_real": 1.0740483081798833,
+      "concentration_shuffled": 1.8890743924432762
+    },
+    {
+      "seed": 456,
+      "top_pair_cov_gcp": 0.2771740719676018,
+      "random_pair_cov_gcp": 0.08075047079473734,
+      "top_pair_cov_gap_featuremap": 0.26334460750222205,
+      "top_pair_cov_gcp_shuffled": 0.11789255887269974,
+      "random_pair_cov_gcp_shuffled": 0.1521124804392457,
+      "concentration_real": 3.4324762349951,
+      "concentration_shuffled": 0.7750354115077788
+    },
+    {
+      "seed": 789,
+      "top_pair_cov_gcp": 0.1830465329112485,
+      "random_pair_cov_gcp": 0.12122515549417585,
+      "top_pair_cov_gap_featuremap": 0.23378000669181348,
+      "top_pair_cov_gcp_shuffled": 0.1303907113149762,
+      "random_pair_cov_gcp_shuffled": 0.11810038667172193,
+      "concentration_real": 1.5099715250111005,
+      "concentration_shuffled": 1.104066760402886
+    },
+    {
+      "seed": 1337,
+      "top_pair_cov_gcp": 0.32996556609869004,
+      "random_pair_cov_gcp": 0.13906665737740695,
+      "top_pair_cov_gap_featuremap": 0.23034551404416562,
+      "top_pair_cov_gcp_shuffled": 0.18015127228572964,
+      "random_pair_cov_gcp_shuffled": 0.12403135830536485,
+      "concentration_real": 2.372715159200317,
+      "concentration_shuffled": 1.4524655276466272
+    }
+  ],
+  "h5": {
+    "real_mean_ci": [
+      2.632618868157636,
+      0.7720056096996244,
+      4.493232126615648
+    ],
+    "shuffled_mean_ci": [
+      1.3512544783489073,
+      0.8220453374398066,
+      1.8804636192580082
+    ],
+    "delta_ci": [
+      1.2813643898087281,
+      -0.7790763869491888,
+      3.341805166566645
+    ],
+    "cohen_dz": 0.7721765407444966,
+    "supported": false
+  },
+  "note": "H5 label-shuffled control INCLUDED; verdict is final for this dataset. Single-dataset (UNSW) mechanism illustration.",
+  "_interval_method": "Student-t, df = n-1, two-sided 95 percent, sd with ddof=1",
+  "_supersedes": "results/gap3/gap3_summary.json",
+  "_generated_by": "scripts/recompute_t_intervals.py",
+  "_reason": "defect 2.2, notes/20260720-bug-prepublication-code-audit.md: percentile bootstrap of a mean at n=5 has 0.839 coverage"
+}

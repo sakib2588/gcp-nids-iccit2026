@@ -1,0 +1,12 @@
+{
+  "macro_f1": 0.9951758329563435,
+  "val_macro_f1": 0.9941350828442713,
+  "dataset": "NF-BoT-IoT-v2",
+  "head": "extratrees",
+  "label_mode": "binary",
+  "seed": 1337,
+  "n_test": 4525,
+  "n_features": 39,
+  "n_estimators": 100,
+  "fit_predict_seconds": 25.2
+}

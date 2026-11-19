@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/gapwide/NF-UNSW-NB15-v2__gcp__binary__seed789.pt",
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "gcp",
+  "label_mode": "binary",
+  "macro_f1": 0.9441423703053202,
+  "balanced_accuracy": 0.9574797780005921,
+  "auc": 0.9898056301137175,
+  "per_family_f1": {
+    "0": 0.973893445188756,
+    "1": 0.9143912954218846
+  },
+  "confusion_matrix": [
+    [
+      15556,
+      614
+    ],
+    [
+      220,
+      4454
+    ]
+  ],
+  "n_test": 20844
+}

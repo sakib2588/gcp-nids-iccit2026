@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/maxpool/NF-CSE-CIC-IDS2018-v2__gmp_wide__binary__seed789.pt",
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "head": "gmp_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.8781782019094708,
+  "balanced_accuracy": 0.9000146374243818,
+  "auc": 0.9217316365057038,
+  "per_family_f1": {
+    "0": 0.8663301597389423,
+    "1": 0.8900262440799992
+  },
+  "confusion_matrix": [
+    [
+      35442,
+      134
+    ],
+    [
+      10803,
+      44257
+    ]
+  ],
+  "n_test": 90636
+}

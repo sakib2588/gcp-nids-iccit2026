@@ -1,0 +1,85 @@
+{
+  "dataset": "NF-ToN-IoT-v2",
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1337
+  ],
+  "n_eval": 500,
+  "attribution": "gradient-x-activation channel attribution (Grad-CAM style) in GCP-layer channel space; NOT input-feature SHAP",
+  "pair_definition": "top pairs = all C(5,2)=10 mutual pairs among the top-5 attributed channels; random baseline = 10 off-diagonal (a!=b) random channel pairs; concentration ratio computed WITHIN each model",
+  "per_seed": [
+    {
+      "seed": 42,
+      "top_pair_cov_gcp": 0.7452933782711625,
+      "random_pair_cov_gcp": 0.3372019432485104,
+      "top_pair_cov_gap_featuremap": 0.2545118068344891,
+      "top_pair_cov_gcp_shuffled": 0.0001417393272731715,
+      "random_pair_cov_gcp_shuffled": 0.0006201138217193147,
+      "concentration_real": 2.210228598006322,
+      "concentration_shuffled": 0.228569856546961
+    },
+    {
+      "seed": 123,
+      "top_pair_cov_gcp": 0.18566734492778778,
+      "random_pair_cov_gcp": 0.24593916358426213,
+      "top_pair_cov_gap_featuremap": 0.15367393773049115,
+      "top_pair_cov_gcp_shuffled": 0.036939614173024896,
+      "random_pair_cov_gcp_shuffled": 0.06526643577963114,
+      "concentration_real": 0.754932001157984,
+      "concentration_shuffled": 0.5659817903608167
+    },
+    {
+      "seed": 456,
+      "top_pair_cov_gcp": 0.3316206820309162,
+      "random_pair_cov_gcp": 0.1275263694114983,
+      "top_pair_cov_gap_featuremap": 0.6927357107400894,
+      "top_pair_cov_gcp_shuffled": 0.003578961288985738,
+      "random_pair_cov_gcp_shuffled": 0.0018599269045125766,
+      "concentration_real": 2.600408712027647,
+      "concentration_shuffled": 1.9242483563748767
+    },
+    {
+      "seed": 789,
+      "top_pair_cov_gcp": 0.9488376066088676,
+      "random_pair_cov_gcp": 0.324337712675333,
+      "top_pair_cov_gap_featuremap": 0.3694412410259247,
+      "top_pair_cov_gcp_shuffled": 0.06367892920970916,
+      "random_pair_cov_gcp_shuffled": 0.09381361231207848,
+      "concentration_real": 2.925461855120957,
+      "concentration_shuffled": 0.678781337167533
+    },
+    {
+      "seed": 1337,
+      "top_pair_cov_gcp": 0.3339683946222067,
+      "random_pair_cov_gcp": 0.1575267122592777,
+      "top_pair_cov_gap_featuremap": 0.11673814412206411,
+      "top_pair_cov_gcp_shuffled": 0.044926312676398086,
+      "random_pair_cov_gcp_shuffled": 0.08307955162599683,
+      "concentration_real": 2.1200746834131765,
+      "concentration_shuffled": 0.5407625799263459
+    }
+  ],
+  "h5": {
+    "real_mean_ci": [
+      2.1222211699452176,
+      1.397055879782955,
+      2.665419340646309
+    ],
+    "shuffled_mean_ci": [
+      0.7876687840753067,
+      0.38609453943384653,
+      1.3809417299692526
+    ],
+    "delta_ci": [
+      1.3345523858699107,
+      0.6449339459007266,
+      2.00719812446248
+    ],
+    "cohen_dz": 1.5266949826317957,
+    "supported": true
+  },
+  "note": "H5 label-shuffled control INCLUDED; verdict is final for this dataset. Single-dataset (UNSW) mechanism illustration."
+}

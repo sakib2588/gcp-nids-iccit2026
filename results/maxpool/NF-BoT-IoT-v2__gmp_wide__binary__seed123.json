@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/maxpool/NF-BoT-IoT-v2__gmp_wide__binary__seed123.pt",
+  "dataset": "NF-BoT-IoT-v2",
+  "head": "gmp_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.990114829533836,
+  "balanced_accuracy": 0.989547812051417,
+  "auc": 0.9965193203297024,
+  "per_family_f1": {
+    "0": 0.9920590951061865,
+    "1": 0.9881705639614855
+  },
+  "confusion_matrix": [
+    [
+      2686,
+      15
+    ],
+    [
+      28,
+      1796
+    ]
+  ],
+  "n_test": 4525
+}

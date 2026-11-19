@@ -1,0 +1,26 @@
+{
+  "checkpoint": "checkpoints/gateC/NF-CSE-CIC-IDS2018-v2__gcp__binary__seed456.pt",
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "head": "gcp",
+  "label_mode": "binary",
+  "macro_f1": 0.8782821403655552,
+  "balanced_accuracy": 0.8998749386465659,
+  "auc": 0.9215721602048946,
+  "per_family_f1": {
+    "0": 0.8662937987247427,
+    "1": 0.8902704820063678
+  },
+  "confusion_matrix": [
+    [
+      35392,
+      184
+    ],
+    [
+      10741,
+      44319
+    ]
+  ],
+  "n_test": 90636,
+  "rank_deficient": true,
+  "rank_deficient_source": "post-hoc correction 2026-07-20, audit defect B7: the L' < C guard was off by one; centring bounds rank at min(C, L'-1) so L'=32 with C=32 is singular (rank 31). Flag rewritten, run NOT retrained. See notes/20260720-rankflag-rewrite-log.md"
+}

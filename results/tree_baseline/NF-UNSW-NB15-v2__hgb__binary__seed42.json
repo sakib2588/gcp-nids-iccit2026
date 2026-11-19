@@ -1,0 +1,14 @@
+{
+  "best_iter": 185,
+  "n_iter_fitted": 500,
+  "val_macro_f1": 0.9472950194293156,
+  "val_macro_f1_at_last_iter": 0.9461615132029374,
+  "budget_limited": false,
+  "macro_f1": 0.9513806666847942,
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "hgb",
+  "label_mode": "binary",
+  "seed": 42,
+  "n_test": 20844,
+  "n_features": 39
+}

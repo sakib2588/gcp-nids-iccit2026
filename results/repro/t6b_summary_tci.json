@@ -1,0 +1,52 @@
+{
+  "dataset": "NF-UNSW-NB15-v2",
+  "label_mode": "binary",
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1337
+  ],
+  "gap_macro_f1": [
+    0.9382314962724925,
+    0.9393698049749488,
+    0.9369988364251964,
+    0.9388967465173353,
+    0.9415466798009118
+  ],
+  "gcp_macro_f1": [
+    0.9430559008215917,
+    0.9439727925836736,
+    0.9439570316064924,
+    0.9441423703053202,
+    0.9427922191779394
+  ],
+  "delta_gcp_minus_gap": [
+    0.00482440454909927,
+    0.004602987608724796,
+    0.006958195181295923,
+    0.005245623787984877,
+    0.001245539377027649
+  ],
+  "gap_mean_ci": [
+    0.9390087127981769,
+    0.9369284281539321,
+    0.9410889974424217
+  ],
+  "gcp_mean_ci": [
+    0.9435840628990035,
+    0.9428217036405714,
+    0.9443464221574357
+  ],
+  "delta_mean_ci": [
+    0.004575350100826503,
+    0.0019947755170266136,
+    0.007155924684626393
+  ],
+  "cohen_dz": 2.2014661134145186,
+  "_interval_method": "Student-t, df = n-1, two-sided 95 percent, sd with ddof=1",
+  "_supersedes": "results/repro/t6b_summary.json",
+  "_generated_by": "scripts/recompute_t_intervals.py",
+  "_reason": "defect 2.2, notes/20260720-bug-prepublication-code-audit.md: percentile bootstrap of a mean at n=5 has 0.839 coverage"
+}

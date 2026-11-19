@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/tier1/NF-UNSW-NB15-v2__gcp__binary__seed123__C128.pt",
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "gcp",
+  "label_mode": "binary",
+  "macro_f1": 0.9470115348058139,
+  "balanced_accuracy": 0.9537497529061805,
+  "auc": 0.9901144742333078,
+  "per_family_f1": {
+    "0": 0.9757326862049654,
+    "1": 0.9182903834066625
+  },
+  "confusion_matrix": [
+    [
+      15681,
+      489
+    ],
+    [
+      291,
+      4383
+    ]
+  ],
+  "n_test": 20844
+}

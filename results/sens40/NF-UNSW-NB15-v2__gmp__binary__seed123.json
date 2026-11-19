@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/sens40/NF-UNSW-NB15-v2__gmp__binary__seed123.pt",
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "gmp",
+  "label_mode": "binary",
+  "macro_f1": 0.9458039048462812,
+  "balanced_accuracy": 0.9543933082627379,
+  "auc": 0.9904233117372674,
+  "per_family_f1": {
+    "0": 0.9750366191915729,
+    "1": 0.9165711905009895
+  },
+  "confusion_matrix": [
+    [
+      15643,
+      527
+    ],
+    [
+      274,
+      4400
+    ]
+  ],
+  "n_test": 20844
+}

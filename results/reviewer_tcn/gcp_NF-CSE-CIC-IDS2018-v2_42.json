@@ -1,0 +1,162 @@
+{
+  "run_id": "NF-CSE-CIC-IDS2018-v2_tcn_gcp_seed42",
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "backbone": "tcn",
+  "head": "gcp",
+  "seed": 42,
+  "label_mode": "binary",
+  "smoke": false,
+  "epochs": 20,
+  "batch_size": 512,
+  "lr": 0.001,
+  "c_last": 32,
+  "n_params": 13682,
+  "lprime": 38,
+  "pooled_dim": 528,
+  "best_val_macro_f1": 0.8801306133776783,
+  "best_epoch": 16,
+  "gcp_nan_events": 0,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.13483471391721333,
+      "val_macro_f1": 0.8796394612016283
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.12110503642831573,
+      "val_macro_f1": 0.8777465678547427
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.11877334480394143,
+      "val_macro_f1": 0.8793699536017823
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1176498745258143,
+      "val_macro_f1": 0.8794510239601739
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.11694944192896474,
+      "val_macro_f1": 0.8794517798734391
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.11628984496250237,
+      "val_macro_f1": 0.8796930047693873
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.11588443845750791,
+      "val_macro_f1": 0.8779099749894519
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.11533763698267929,
+      "val_macro_f1": 0.8794672340357318
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.11503617667742524,
+      "val_macro_f1": 0.8795567152394905
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.11467817518992654,
+      "val_macro_f1": 0.8798152196208443
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.11448386000708846,
+      "val_macro_f1": 0.8796374950636963
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.11412578892766853,
+      "val_macro_f1": 0.8797366329794044
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.1139884287234819,
+      "val_macro_f1": 0.879742171028185
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.11380098157030903,
+      "val_macro_f1": 0.8796100180827794
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.1136542142120287,
+      "val_macro_f1": 0.8800186007376045
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.1134851142938947,
+      "val_macro_f1": 0.8790027740567874
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.1132452711163395,
+      "val_macro_f1": 0.8801306133776783
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.11319929407793676,
+      "val_macro_f1": 0.8785973588677856
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.1128998742270524,
+      "val_macro_f1": 0.8798348580889475
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.11291414741637212,
+      "val_macro_f1": 0.8800487019536523
+    }
+  ],
+  "test": {
+    "macro_f1": 0.8786177233432889,
+    "balanced_accuracy": 0.9003272775346329,
+    "auc": 0.9240486922355734,
+    "per_family_f1": {
+      "0": 0.8667253779539117,
+      "1": 0.8905100687326661
+    },
+    "confusion_matrix": [
+      [
+        35430,
+        146
+      ],
+      [
+        10750,
+        44310
+      ]
+    ],
+    "n_test": 90636
+  },
+  "split_checksums": {
+    "train_X": "a9e525a625e499ce",
+    "val_X": "0af7f8386cd6e4f3",
+    "test_X": "aee65a50ffb5f29c"
+  },
+  "split_meta": {
+    "n_train": 1108710,
+    "n_val": 92016,
+    "n_test": 90636,
+    "n_features": 38,
+    "seed": 42,
+    "dedup_policy": "leakage-only"
+  },
+  "data_dir": "/workspace/ML-paper/data/processed",
+  "device": "cuda",
+  "python": "3.11.10",
+  "torch": "2.5.1+cu124",
+  "git_head": "unknown",
+  "runtime_seconds": 453.3361970242113,
+  "finished_at": "2026-11-18 11:23:36 AM",
+  "log_file": "/workspace/ML-paper/reviewer_runs_2026-11-18/results/tcn/logs/NF-CSE-CIC-IDS2018-v2_tcn_gcp_seed42_20261118_111600AM.log"
+}

@@ -1,0 +1,105 @@
+{
+  "n_families": 15,
+  "datasets": [
+    "NF-ToN-IoT-v2",
+    "NF-CSE-CIC-IDS2018-v2"
+  ],
+  "pearson_r": -0.3557266049607721,
+  "pearson_ci95": [
+    -0.7369645778661458,
+    0.21699873162518207
+  ],
+  "spearman_rho": -0.06428571428571428,
+  "rows": [
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "Backdoor",
+      "efc_index": 0.6446146661826618,
+      "gcp_gain": 0.29399371715343464
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "DDoS",
+      "efc_index": 0.6372564893668278,
+      "gcp_gain": 0.016334820440343067
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "DoS",
+      "efc_index": 0.6441157669531381,
+      "gcp_gain": 0.013814743332617119
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "injection",
+      "efc_index": 0.643369981100474,
+      "gcp_gain": 0.01749214613808614
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "mitm",
+      "efc_index": 0.6626200963202237,
+      "gcp_gain": 0.03344261168327034
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "password",
+      "efc_index": 0.6790557450696032,
+      "gcp_gain": 0.022802105570924214
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "ransomware",
+      "efc_index": 0.5805792956268248,
+      "gcp_gain": 0.2771387507834262
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "scanning",
+      "efc_index": 0.7318101022744444,
+      "gcp_gain": 0.04748140731477196
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "xss",
+      "efc_index": 0.6481628009874031,
+      "gcp_gain": 0.013301015032494035
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Bot",
+      "efc_index": 0.4288458756986081,
+      "gcp_gain": 0.11379097490863488
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Brute Force",
+      "efc_index": 0.5001981840012641,
+      "gcp_gain": 0.001720766737867807
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "DDoS",
+      "efc_index": 0.42642900806057693,
+      "gcp_gain": 0.0023511536364786423
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "DoS",
+      "efc_index": 0.45829395245478327,
+      "gcp_gain": 0.0002705027018706785
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Infilteration",
+      "efc_index": 0.7365888138362957,
+      "gcp_gain": -0.11135833010665139
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "injection",
+      "efc_index": 0.45228406967901147,
+      "gcp_gain": 0.75
+    }
+  ]
+}

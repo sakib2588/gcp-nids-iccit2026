@@ -1,0 +1,9 @@
+{
+  "signal": "cov_far",
+  "strength": 0.0,
+  "head": "gmp",
+  "seed": 42,
+  "val_macro_f1": 0.5132817472280843,
+  "test_macro_f1": 0.5015266129912644,
+  "n_samples": 40000
+}

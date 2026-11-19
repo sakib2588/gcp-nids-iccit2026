@@ -1,0 +1,9 @@
+{
+  "signal": "cov",
+  "strength": 1.0,
+  "head": "gcp",
+  "seed": 1337,
+  "val_macro_f1": 0.6668599176011265,
+  "test_macro_f1": 0.6546471466711005,
+  "n_samples": 40000
+}

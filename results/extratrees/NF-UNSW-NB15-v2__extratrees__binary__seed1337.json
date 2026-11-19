@@ -1,0 +1,12 @@
+{
+  "macro_f1": 0.9408411085275555,
+  "val_macro_f1": 0.9396578636741847,
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "extratrees",
+  "label_mode": "binary",
+  "seed": 1337,
+  "n_test": 20844,
+  "n_features": 39,
+  "n_estimators": 100,
+  "fit_predict_seconds": 44.0
+}

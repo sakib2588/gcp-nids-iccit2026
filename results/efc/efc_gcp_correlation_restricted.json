@@ -1,0 +1,113 @@
+{
+  "description": "Spearman and Pearson between the per-family coupling contrast index and the per-family GCP minus GAP macro-F1 gain, restricted to families with at least 80000 flows in the source corpus.",
+  "source_correlation_file": "results/efc/efc_gcp_correlation.json",
+  "source_counts_file": "results/data_inventory.json",
+  "index_definition": "as published: off/(off+diag) on block SUMS, i.e. not normalised by block count. Rank based statistics are invariant to that defect, so this restricted rho is unchanged by the block-count correction; see results/efc/efc_gcp_correlation_corrected.json",
+  "min_flows": 80000,
+  "n_families_all": 15,
+  "n_families_kept": 11,
+  "n_families_dropped": 4,
+  "spearman_rho": 0.045454545454545456,
+  "pearson_r": -0.38621843848200527,
+  "dropped_families": [
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "Backdoor",
+      "n_flows_corpus": 16809
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "mitm",
+      "n_flows_corpus": 7723
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "ransomware",
+      "n_flows_corpus": 3425
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "injection",
+      "n_flows_corpus": 432
+    }
+  ],
+  "rows": [
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "DDoS",
+      "efc_index": 0.6372564893668278,
+      "gcp_gain": 0.016334820440343067,
+      "n_flows_corpus": 2026234
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "DoS",
+      "efc_index": 0.6441157669531381,
+      "gcp_gain": 0.013814743332617119,
+      "n_flows_corpus": 712609
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "injection",
+      "efc_index": 0.643369981100474,
+      "gcp_gain": 0.01749214613808614,
+      "n_flows_corpus": 684465
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "password",
+      "efc_index": 0.6790557450696032,
+      "gcp_gain": 0.022802105570924214,
+      "n_flows_corpus": 1153323
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "scanning",
+      "efc_index": 0.7318101022744444,
+      "gcp_gain": 0.04748140731477196,
+      "n_flows_corpus": 3781419
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "xss",
+      "efc_index": 0.6481628009874031,
+      "gcp_gain": 0.013301015032494035,
+      "n_flows_corpus": 2455020
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Bot",
+      "efc_index": 0.4288458756986081,
+      "gcp_gain": 0.11379097490863488,
+      "n_flows_corpus": 143097
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Brute Force",
+      "efc_index": 0.5001981840012641,
+      "gcp_gain": 0.001720766737867807,
+      "n_flows_corpus": 123982
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "DDoS",
+      "efc_index": 0.42642900806057693,
+      "gcp_gain": 0.0023511536364786423,
+      "n_flows_corpus": 1390270
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "DoS",
+      "efc_index": 0.45829395245478327,
+      "gcp_gain": 0.0002705027018706785,
+      "n_flows_corpus": 483999
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Infilteration",
+      "efc_index": 0.7365888138362957,
+      "gcp_gain": -0.11135833010665139,
+      "n_flows_corpus": 116361
+    }
+  ]
+}

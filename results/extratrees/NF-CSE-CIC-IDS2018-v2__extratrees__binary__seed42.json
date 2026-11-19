@@ -1,0 +1,12 @@
+{
+  "macro_f1": 0.8371527767872783,
+  "val_macro_f1": 0.8412258262484191,
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "head": "extratrees",
+  "label_mode": "binary",
+  "seed": 42,
+  "n_test": 90636,
+  "n_features": 38,
+  "n_estimators": 100,
+  "fit_predict_seconds": 36.2
+}

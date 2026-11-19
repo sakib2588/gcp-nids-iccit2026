@@ -1,0 +1,162 @@
+{
+  "run_id": "NF-BoT-IoT-v2_tcn_gap_seed123",
+  "dataset": "NF-BoT-IoT-v2",
+  "backbone": "tcn",
+  "head": "gap",
+  "seed": 123,
+  "label_mode": "binary",
+  "smoke": false,
+  "epochs": 20,
+  "batch_size": 512,
+  "lr": 0.001,
+  "c_last": 32,
+  "n_params": 12690,
+  "lprime": 39,
+  "pooled_dim": 32,
+  "best_val_macro_f1": 0.9870699598560245,
+  "best_epoch": 16,
+  "gcp_nan_events": 0,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.030335361374476805,
+      "val_macro_f1": 0.9749875435974091
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.006776989498728082,
+      "val_macro_f1": 0.9752207592136891
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.005543421536678314,
+      "val_macro_f1": 0.9793726919966335
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.004497745899662011,
+      "val_macro_f1": 0.9820515318445909
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.0041557844589167605,
+      "val_macro_f1": 0.9838405298503559
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.004003386279633719,
+      "val_macro_f1": 0.9812208204408992
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.0034269712856765714,
+      "val_macro_f1": 0.9810108162854021
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.00333645032899811,
+      "val_macro_f1": 0.9834349673979039
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.003250358485598217,
+      "val_macro_f1": 0.9842592108701333
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.0032140573643580452,
+      "val_macro_f1": 0.9815981151945421
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.0029625713222549365,
+      "val_macro_f1": 0.98483211080415
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.002978086706420312,
+      "val_macro_f1": 0.9856632070032671
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.0029683136592949084,
+      "val_macro_f1": 0.9852467062243029
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.002820640372337122,
+      "val_macro_f1": 0.9848667009580925
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.0027089240228319704,
+      "val_macro_f1": 0.9862511730565524
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.0027383114944252067,
+      "val_macro_f1": 0.9856698704341911
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.0026516986640390257,
+      "val_macro_f1": 0.9870699598560245
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.002627168841911174,
+      "val_macro_f1": 0.9848569183913389
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.0027536955857139296,
+      "val_macro_f1": 0.9856467178112586
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.0025292157937529727,
+      "val_macro_f1": 0.9750182362701434
+    }
+  ],
+  "test": {
+    "macro_f1": 0.9915063346230717,
+    "balanced_accuracy": 0.991637579811246,
+    "auc": 0.9981557350429016,
+    "per_family_f1": {
+      "0": 0.9931468790516762,
+      "1": 0.9898657901944673
+    },
+    "confusion_matrix": [
+      [
+        2681,
+        20
+      ],
+      [
+        17,
+        1807
+      ]
+    ],
+    "n_test": 4525
+  },
+  "split_checksums": {
+    "train_X": "0cb9e11c7fc52094",
+    "val_X": "59a2730e779a66d4",
+    "test_X": "f4ad8c84f770d99c"
+  },
+  "split_meta": {
+    "n_train": 936226,
+    "n_val": 5020,
+    "n_test": 4525,
+    "n_features": 39,
+    "seed": 42,
+    "dedup_policy": "leakage-only"
+  },
+  "data_dir": "/workspace/ML-paper/data/processed",
+  "device": "cuda",
+  "python": "3.11.10",
+  "torch": "2.5.1+cu124",
+  "git_head": "unknown",
+  "runtime_seconds": 574.2699035701808,
+  "finished_at": "2026-11-18 11:45:26 AM",
+  "log_file": "/workspace/ML-paper/reviewer_runs_2026-11-18/results/tcn/logs/NF-BoT-IoT-v2_tcn_gap_seed123_20261118_113549AM.log"
+}

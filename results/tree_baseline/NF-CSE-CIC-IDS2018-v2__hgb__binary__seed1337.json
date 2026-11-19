@@ -1,0 +1,14 @@
+{
+  "best_iter": 414,
+  "n_iter_fitted": 500,
+  "val_macro_f1": 0.8822881414386905,
+  "val_macro_f1_at_last_iter": 0.8822343863723605,
+  "budget_limited": false,
+  "macro_f1": 0.8806286111826866,
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "head": "hgb",
+  "label_mode": "binary",
+  "seed": 1337,
+  "n_test": 90636,
+  "n_features": 38
+}

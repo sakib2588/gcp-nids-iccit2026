@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/gapwide/NF-UNSW-NB15-v2__gap_wide__binary__seed789__C64.pt",
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "gap_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.9417782572502358,
+  "balanced_accuracy": 0.9505606350370701,
+  "auc": 0.988635801307725,
+  "per_family_f1": {
+    "0": 0.973160011222295,
+    "1": 0.9103965032781767
+  },
+  "confusion_matrix": [
+    [
+      15609,
+      561
+    ],
+    [
+      300,
+      4374
+    ]
+  ],
+  "n_test": 20844
+}

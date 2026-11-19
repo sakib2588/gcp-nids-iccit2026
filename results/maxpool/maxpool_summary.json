@@ -1,0 +1,2222 @@
+{
+  "pre_registration": "notes/20260811-decision-maxpool-control.md",
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1337
+  ],
+  "dz_gate": 0.8,
+  "head_widths": {
+    "gap": 32,
+    "se": 32,
+    "gcp": 528,
+    "gmp": 32,
+    "gmp_wide": 528
+  },
+  "params": {
+    "gap": 4962,
+    "gcp": 5954,
+    "gmp": 4962,
+    "gmp_wide": 23378
+  },
+  "real": {
+    "NF-UNSW-NB15-v2": {
+      "provenance": {
+        "gap": {
+          "dir": "results/repro",
+          "script": "run_repro_t6b.py",
+          "n_seeds": 5
+        },
+        "se": {
+          "dir": "results/repro",
+          "script": "run_repro_t6b.py",
+          "n_seeds": 5
+        },
+        "gcp": {
+          "dir": "results/repro",
+          "script": "run_repro_t6b.py",
+          "n_seeds": 5
+        },
+        "gmp": {
+          "dir": "results/maxpool",
+          "script": "run_maxpool_control.py",
+          "n_seeds": 5
+        },
+        "gmp_wide": {
+          "dir": "results/maxpool",
+          "script": "run_maxpool_control.py",
+          "n_seeds": 5
+        }
+      },
+      "per_head": {
+        "gap": {
+          "per_seed": {
+            "42": 0.9382314962724925,
+            "123": 0.9393698049749488,
+            "456": 0.9369988364251964,
+            "789": 0.9388967465173353,
+            "1337": 0.9415466798009118
+          },
+          "mean": 0.9390087127981769,
+          "t_ci": [
+            0.9369284281539321,
+            0.9410889974424217
+          ]
+        },
+        "se": {
+          "per_seed": {
+            "42": 0.943350839686192,
+            "123": 0.9393053851421225,
+            "456": 0.9396547673613943,
+            "789": 0.9410911530086916,
+            "1337": 0.9387249125449009
+          },
+          "mean": 0.9404254115486603,
+          "t_ci": [
+            0.9381240257676453,
+            0.9427267973296753
+          ]
+        },
+        "gcp": {
+          "per_seed": {
+            "42": 0.9430559008215917,
+            "123": 0.9439727925836736,
+            "456": 0.9439570316064924,
+            "789": 0.9441423703053202,
+            "1337": 0.9427922191779394
+          },
+          "mean": 0.9435840628990035,
+          "t_ci": [
+            0.9428217036405714,
+            0.9443464221574357
+          ]
+        },
+        "gmp": {
+          "per_seed": {
+            "42": 0.9452072153769019,
+            "123": 0.9433224857462705,
+            "456": 0.9401286636662904,
+            "789": 0.942700402650329,
+            "1337": 0.944225845071837
+          },
+          "mean": 0.9431169225023257,
+          "t_ci": [
+            0.9407330190165681,
+            0.9455008259880833
+          ]
+        },
+        "gmp_wide": {
+          "per_seed": {
+            "42": 0.942557327444109,
+            "123": 0.9430281236582224,
+            "456": 0.9433767361715892,
+            "789": 0.940185781835092,
+            "1337": 0.9401791871553967
+          },
+          "mean": 0.9418654312528819,
+          "t_ci": [
+            0.9399239775345336,
+            0.9438068849712302
+          ]
+        }
+      },
+      "contrasts": [
+        {
+          "contrast": "gmp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.006975719104409417,
+            "123": 0.003952680771321715,
+            "456": 0.0031298272410940076,
+            "789": 0.0038036561329936047,
+            "1337": 0.0026791652709252656
+          },
+          "delta_mean": 0.004108209704148802,
+          "delta_bootstrap_ci": [
+            0.0030843282314064304,
+            0.005601933065128795
+          ],
+          "delta_t_ci": [
+            0.002017659691120117,
+            0.006198759717177486
+          ],
+          "d_z": 2.4400354236552353,
+          "n_seeds_positive": 5,
+          "t_ci_excludes_zero": true,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gmp": 32,
+            "gap": 32
+          },
+          "capacity_confounded": false,
+          "complete_n5": true,
+          "source": {
+            "gmp": {
+              "dir": "results/maxpool",
+              "script": "run_maxpool_control.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/repro",
+              "script": "run_repro_t6b.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": true
+        },
+        {
+          "contrast": "gcp - gmp",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": -0.0021513145553101465,
+            "123": 0.0006503068374030807,
+            "456": 0.0038283679402019155,
+            "789": 0.0014419676549912719,
+            "1337": -0.0014336258938976165
+          },
+          "delta_mean": 0.000467140396677701,
+          "delta_bootstrap_ci": [
+            -0.001303914812202489,
+            0.0022986891163398805
+          ],
+          "delta_t_ci": [
+            -0.002494098574387657,
+            0.003428379367743059
+          ],
+          "d_z": 0.19587457085662022,
+          "n_seeds_positive": 3,
+          "t_ci_excludes_zero": false,
+          "bootstrap_ci_excludes_zero": false,
+          "passes_dz_gate": false,
+          "classifier_width": {
+            "gcp": 528,
+            "gmp": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/repro",
+              "script": "run_repro_t6b.py",
+              "n_seeds": 5
+            },
+            "gmp": {
+              "dir": "results/maxpool",
+              "script": "run_maxpool_control.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": true
+        },
+        {
+          "contrast": "gcp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.00482440454909927,
+            "123": 0.004602987608724796,
+            "456": 0.006958195181295923,
+            "789": 0.005245623787984877,
+            "1337": 0.001245539377027649
+          },
+          "delta_mean": 0.004575350100826503,
+          "delta_bootstrap_ci": [
+            0.002717045905558524,
+            0.006060395540342367
+          ],
+          "delta_t_ci": [
+            0.0019947755170266136,
+            0.007155924684626393
+          ],
+          "d_z": 2.2014661134145186,
+          "n_seeds_positive": 5,
+          "t_ci_excludes_zero": true,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gcp": 528,
+            "gap": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/repro",
+              "script": "run_repro_t6b.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/repro",
+              "script": "run_repro_t6b.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": false
+        },
+        {
+          "contrast": "gcp - gmp_wide",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.0004985733774827139,
+            "123": 0.0009446689254511975,
+            "456": 0.000580295434903122,
+            "789": 0.003956588470228173,
+            "1337": 0.002613032022542705
+          },
+          "delta_mean": 0.0017186316461215822,
+          "delta_bootstrap_ci": [
+            0.0006204813100445739,
+            0.0030126185736260693
+          ],
+          "delta_t_ci": [
+            -0.00016360285063919222,
+            0.0036008661428823564
+          ],
+          "d_z": 1.1337392045652532,
+          "n_seeds_positive": 5,
+          "t_ci_excludes_zero": false,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gcp": 528,
+            "gmp_wide": 528
+          },
+          "capacity_confounded": false,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/repro",
+              "script": "run_repro_t6b.py",
+              "n_seeds": 5
+            },
+            "gmp_wide": {
+              "dir": "results/maxpool",
+              "script": "run_maxpool_control.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": true
+        }
+      ]
+    },
+    "NF-CSE-CIC-IDS2018-v2": {
+      "provenance": {
+        "gap": {
+          "dir": "results/gateC",
+          "script": "run_gateC_headline.py",
+          "n_seeds": 5
+        },
+        "se": {
+          "dir": "results/gateC",
+          "script": "run_gateC_headline.py",
+          "n_seeds": 5
+        },
+        "gcp": {
+          "dir": "results/gateC",
+          "script": "run_gateC_headline.py",
+          "n_seeds": 5
+        },
+        "gmp": {
+          "dir": "results/maxpool",
+          "script": "run_maxpool_control.py",
+          "n_seeds": 5
+        }
+      },
+      "per_head": {
+        "gap": {
+          "per_seed": {
+            "42": 0.8778196511537082,
+            "123": 0.877621175445402,
+            "456": 0.8777779631857049,
+            "789": 0.8781020803870134,
+            "1337": 0.8780532542803956
+          },
+          "mean": 0.8778748248904448,
+          "t_ci": [
+            0.8776263008861055,
+            0.878123348894784
+          ]
+        },
+        "se": {
+          "per_seed": {
+            "42": 0.8783298019626896,
+            "123": 0.8782376345075081,
+            "456": 0.878704720641038,
+            "789": 0.8782569625946488,
+            "1337": 0.8784977937445864
+          },
+          "mean": 0.878405382690094,
+          "t_ci": [
+            0.878161732083622,
+            0.8786490332965661
+          ]
+        },
+        "gcp": {
+          "per_seed": {
+            "42": 0.8784601698872906,
+            "123": 0.8785219662664328,
+            "456": 0.8782821403655552,
+            "789": 0.8780935420726859,
+            "1337": 0.8782662612467855
+          },
+          "mean": 0.8783248159677498,
+          "t_ci": [
+            0.8781134352981009,
+            0.8785361966373987
+          ]
+        },
+        "gmp": {
+          "per_seed": {
+            "42": 0.8779521854988106,
+            "123": 0.8780572862351756,
+            "456": 0.8778431739925873,
+            "789": 0.878478678164899,
+            "1337": 0.8779639193539928
+          },
+          "mean": 0.8780590486490929,
+          "t_ci": [
+            0.8777529065639263,
+            0.8783651907342594
+          ]
+        }
+      },
+      "contrasts": [
+        {
+          "contrast": "gmp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.00013253434510240858,
+            "123": 0.00043611078977368045,
+            "456": 6.521080688237646e-05,
+            "789": 0.0003765977778855678,
+            "1337": -8.93349264028398e-05
+          },
+          "delta_mean": 0.0001842237586482387,
+          "delta_bootstrap_ci": [
+            1.685722121229638e-05,
+            0.00035159029608418103
+          ],
+          "delta_t_ci": [
+            -8.78997832796046e-05,
+            0.000456347300576082
+          ],
+          "d_z": 0.8405888263351777,
+          "n_seeds_positive": 4,
+          "t_ci_excludes_zero": false,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gmp": 32,
+            "gap": 32
+          },
+          "capacity_confounded": false,
+          "complete_n5": true,
+          "source": {
+            "gmp": {
+              "dir": "results/maxpool",
+              "script": "run_maxpool_control.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": true
+        },
+        {
+          "contrast": "gcp - gmp",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.0005079843884799873,
+            "123": 0.0004646800312571031,
+            "456": 0.0004389663729679194,
+            "789": -0.00038513609221313416,
+            "1337": 0.0003023418927927679
+          },
+          "delta_mean": 0.00026576731865692873,
+          "delta_bootstrap_ci": [
+            -6.923292085944195e-05,
+            0.00047685904248842006
+          ],
+          "delta_t_ci": [
+            -0.00019601077679769755,
+            0.000727545414111555
+          ],
+          "d_z": 0.714615341705572,
+          "n_seeds_positive": 4,
+          "t_ci_excludes_zero": false,
+          "bootstrap_ci_excludes_zero": false,
+          "passes_dz_gate": false,
+          "classifier_width": {
+            "gcp": 528,
+            "gmp": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            },
+            "gmp": {
+              "dir": "results/maxpool",
+              "script": "run_maxpool_control.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": true
+        },
+        {
+          "contrast": "gcp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.0006405187335823959,
+            "123": 0.0009007908210307836,
+            "456": 0.0005041771798502959,
+            "789": -8.538314327566354e-06,
+            "1337": 0.0002130069663899281
+          },
+          "delta_mean": 0.00044999107730516743,
+          "delta_bootstrap_ci": [
+            0.00016869791024642922,
+            0.0007173592578153309
+          ],
+          "delta_t_ci": [
+            7.120666576872908e-06,
+            0.000892861488033462
+          ],
+          "d_z": 1.2616280218042035,
+          "n_seeds_positive": 4,
+          "t_ci_excludes_zero": true,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gcp": 528,
+            "gap": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": false
+        }
+      ]
+    },
+    "NF-ToN-IoT-v2": {
+      "provenance": {
+        "gap": {
+          "dir": "results/gateC",
+          "script": "run_gateC_headline.py",
+          "n_seeds": 5
+        },
+        "se": {
+          "dir": "results/gateC",
+          "script": "run_gateC_headline.py",
+          "n_seeds": 5
+        },
+        "gcp": {
+          "dir": "results/gateC",
+          "script": "run_gateC_headline.py",
+          "n_seeds": 5
+        },
+        "gmp": {
+          "dir": "results/maxpool",
+          "script": "run_maxpool_control.py",
+          "n_seeds": 5
+        }
+      },
+      "per_head": {
+        "gap": {
+          "per_seed": {
+            "42": 0.9223622817176225,
+            "123": 0.92957952358836,
+            "456": 0.9271647067847064,
+            "789": 0.926984442330786,
+            "1337": 0.9278497768893166
+          },
+          "mean": 0.9267881462621583,
+          "t_ci": [
+            0.9234629284677758,
+            0.9301133640565409
+          ]
+        },
+        "se": {
+          "per_seed": {
+            "42": 0.9331309390081778,
+            "123": 0.9324903105836857,
+            "456": 0.9357910337507396,
+            "789": 0.9350305307237854,
+            "1337": 0.937982517230102
+          },
+          "mean": 0.9348850662592982,
+          "t_ci": [
+            0.9321613214873427,
+            0.9376088110312538
+          ]
+        },
+        "gcp": {
+          "per_seed": {
+            "42": 0.9422700095888676,
+            "123": 0.9419112592230643,
+            "456": 0.9427031661039674,
+            "789": 0.9414421106519321,
+            "1337": 0.9450266189215409
+          },
+          "mean": 0.9426706328978744,
+          "t_ci": [
+            0.9409369499110436,
+            0.9444043158847053
+          ]
+        },
+        "gmp": {
+          "per_seed": {
+            "42": 0.9407899030771032,
+            "123": 0.9455937724477741,
+            "456": 0.9432625709870575,
+            "789": 0.9411174959260753,
+            "1337": 0.9410628773015175
+          },
+          "mean": 0.9423653239479055,
+          "t_ci": [
+            0.9398083306848066,
+            0.9449223172110044
+          ]
+        }
+      },
+      "contrasts": [
+        {
+          "contrast": "gmp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.018427621359480728,
+            "123": 0.01601424885941405,
+            "456": 0.016097864202351042,
+            "789": 0.014133053595289269,
+            "1337": 0.013213100412200918
+          },
+          "delta_mean": 0.015577177685747201,
+          "delta_bootstrap_ci": [
+            0.013974043806848612,
+            0.0170860333066291
+          ],
+          "delta_t_ci": [
+            0.013073636139441274,
+            0.01808071923205313
+          ],
+          "d_z": 7.725703915141587,
+          "n_seeds_positive": 5,
+          "t_ci_excludes_zero": true,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gmp": 32,
+            "gap": 32
+          },
+          "capacity_confounded": false,
+          "complete_n5": true,
+          "source": {
+            "gmp": {
+              "dir": "results/maxpool",
+              "script": "run_maxpool_control.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": true
+        },
+        {
+          "contrast": "gcp - gmp",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.0014801065117644452,
+            "123": -0.0036825132247098047,
+            "456": -0.0005594048830900311,
+            "789": 0.00032461472585676443,
+            "1337": 0.003963741620023442
+          },
+          "delta_mean": 0.0003053089499689632,
+          "delta_bootstrap_ci": [
+            -0.002025367609091,
+            0.00243546739867656
+          ],
+          "delta_t_ci": [
+            -0.0031744035825458407,
+            0.003785021482483767
+          ],
+          "d_z": 0.10894323251233773,
+          "n_seeds_positive": 3,
+          "t_ci_excludes_zero": false,
+          "bootstrap_ci_excludes_zero": false,
+          "passes_dz_gate": false,
+          "classifier_width": {
+            "gcp": 528,
+            "gmp": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            },
+            "gmp": {
+              "dir": "results/maxpool",
+              "script": "run_maxpool_control.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": true
+        },
+        {
+          "contrast": "gcp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.019907727871245173,
+            "123": 0.012331735634704244,
+            "456": 0.015538459319261011,
+            "789": 0.014457668321146033,
+            "1337": 0.01717684203222436
+          },
+          "delta_mean": 0.015882486635716165,
+          "delta_bootstrap_ci": [
+            0.013725943451496626,
+            0.018269196367832686
+          ],
+          "delta_t_ci": [
+            0.012335898998886482,
+            0.019429074272545848
+          ],
+          "d_z": 5.560474990870283,
+          "n_seeds_positive": 5,
+          "t_ci_excludes_zero": true,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gcp": 528,
+            "gap": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/gateC",
+              "script": "run_gateC_headline.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": false
+        }
+      ]
+    },
+    "NF-BoT-IoT-v2": {
+      "provenance": {
+        "gap": {
+          "dir": "results/botredo",
+          "script": "run_botiot_same_driver.py",
+          "n_seeds": 5
+        },
+        "se": {
+          "dir": "results/botredo",
+          "script": "run_botiot_same_driver.py",
+          "n_seeds": 5
+        },
+        "gcp": {
+          "dir": "results/botredo",
+          "script": "run_botiot_same_driver.py",
+          "n_seeds": 5
+        },
+        "gmp": {
+          "dir": "results/botredo",
+          "script": "run_botiot_same_driver.py",
+          "n_seeds": 5
+        }
+      },
+      "per_head": {
+        "gap": {
+          "per_seed": {
+            "42": 0.9827769875280269,
+            "123": 0.9841799450497251,
+            "456": 0.9866820565157803,
+            "789": 0.9796120866951432,
+            "1337": 0.9841491654279857
+          },
+          "mean": 0.9834800482433321,
+          "t_ci": [
+            0.980275337083159,
+            0.9866847594035053
+          ]
+        },
+        "se": {
+          "per_seed": {
+            "42": 0.9809533831421657,
+            "123": 0.9867008230946478,
+            "456": 0.9848690914219984,
+            "789": 0.9800248616708669,
+            "1337": 0.984855833006769
+          },
+          "mean": 0.9834807984672895,
+          "t_ci": [
+            0.9799405335491354,
+            0.9870210633854437
+          ]
+        },
+        "gcp": {
+          "per_seed": {
+            "42": 0.987596109213936,
+            "123": 0.9885149159388296,
+            "456": 0.9898931260261701,
+            "789": 0.9880745163818538,
+            "1337": 0.9892126603981153
+          },
+          "mean": 0.9886582655917809,
+          "t_ci": [
+            0.9875267624707209,
+            0.989789768712841
+          ]
+        },
+        "gmp": {
+          "per_seed": {
+            "42": 0.9862325754606991,
+            "123": 0.9892088333164453,
+            "456": 0.9905677504970838,
+            "789": 0.9871181031015379,
+            "1337": 0.9915093394730136
+          },
+          "mean": 0.988927320369756,
+          "t_ci": [
+            0.9861528194262826,
+            0.9917018213132293
+          ]
+        }
+      },
+      "contrasts": [
+        {
+          "contrast": "gmp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.0034555879326721994,
+            "123": 0.005028888266720211,
+            "456": 0.003885693981303451,
+            "789": 0.0075060164063947,
+            "1337": 0.007360174045027867
+          },
+          "delta_mean": 0.005447272126423685,
+          "delta_bootstrap_ci": [
+            0.003942290418934302,
+            0.006952253833913069
+          ],
+          "delta_t_ci": [
+            0.0030850084872356023,
+            0.007809535765611768
+          ],
+          "d_z": 2.863220504094052,
+          "n_seeds_positive": 5,
+          "t_ci_excludes_zero": true,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gmp": 32,
+            "gap": 32
+          },
+          "capacity_confounded": false,
+          "complete_n5": true,
+          "source": {
+            "gmp": {
+              "dir": "results/botredo",
+              "script": "run_botiot_same_driver.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/botredo",
+              "script": "run_botiot_same_driver.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": false
+        },
+        {
+          "contrast": "gcp - gmp",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.0013635337532369451,
+            "123": -0.0006939173776157048,
+            "456": -0.0006746244709137095,
+            "789": 0.0009564132803159264,
+            "1337": -0.002296679074898278
+          },
+          "delta_mean": -0.00026905477797496414,
+          "delta_bootstrap_ci": [
+            -0.001331163475188335,
+            0.0008706194324822114
+          ],
+          "delta_t_ci": [
+            -0.0020921639178358765,
+            0.0015540543618859483
+          ],
+          "d_z": -0.1832449983667501,
+          "n_seeds_positive": 2,
+          "t_ci_excludes_zero": false,
+          "bootstrap_ci_excludes_zero": false,
+          "passes_dz_gate": false,
+          "classifier_width": {
+            "gcp": 528,
+            "gmp": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/botredo",
+              "script": "run_botiot_same_driver.py",
+              "n_seeds": 5
+            },
+            "gmp": {
+              "dir": "results/botredo",
+              "script": "run_botiot_same_driver.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": false
+        },
+        {
+          "contrast": "gcp - gap",
+          "seeds": [
+            42,
+            123,
+            456,
+            789,
+            1337
+          ],
+          "per_seed_delta": {
+            "42": 0.004819121685909145,
+            "123": 0.004334970889104506,
+            "456": 0.0032110695103897413,
+            "789": 0.008462429686710626,
+            "1337": 0.0050634949701295895
+          },
+          "delta_mean": 0.005178217348448722,
+          "delta_bootstrap_ci": [
+            0.0038854103376186,
+            0.006957150983873195
+          ],
+          "delta_t_ci": [
+            0.002733297948826524,
+            0.00762313674807092
+          ],
+          "d_z": 2.6297824204088163,
+          "n_seeds_positive": 5,
+          "t_ci_excludes_zero": true,
+          "bootstrap_ci_excludes_zero": true,
+          "passes_dz_gate": true,
+          "classifier_width": {
+            "gcp": 528,
+            "gap": 32
+          },
+          "capacity_confounded": true,
+          "complete_n5": true,
+          "source": {
+            "gcp": {
+              "dir": "results/botredo",
+              "script": "run_botiot_same_driver.py",
+              "n_seeds": 5
+            },
+            "gap": {
+              "dir": "results/botredo",
+              "script": "run_botiot_same_driver.py",
+              "n_seeds": 5
+            }
+          },
+          "cross_path": false
+        }
+      ]
+    }
+  },
+  "synthetic": {
+    "dir": "results/gateB_synthetic_n40k",
+    "n_samples": 40000,
+    "current_script_provenance": true,
+    "contrasts": [
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.012034150255588294,
+          "123": 0.009165635889430757,
+          "456": 0.006687406915421412,
+          "789": 0.017240925581132438,
+          "1337": 0.0008724965123627637
+        },
+        "delta_mean": 0.004386462928551815,
+        "delta_bootstrap_ci": [
+          -0.004545527387184412,
+          0.012352181829038167
+        ],
+        "delta_t_ci": [
+          -0.009149334062901433,
+          0.01792225992000506
+        ],
+        "d_z": 0.4023784562724506,
+        "n_seeds_positive": 4,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.0
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.018001155075173636,
+          "123": -0.00033240170987558493,
+          "456": -0.02349502952142568,
+          "789": -0.022112923182093125,
+          "1337": 0.004337426349194429
+        },
+        "delta_mean": -0.004720354597805265,
+        "delta_bootstrap_ci": [
+          -0.01830966142338264,
+          0.00886895222777211
+        ],
+        "delta_t_ci": [
+          -0.026867220184682183,
+          0.01742651098907165
+        ],
+        "d_z": -0.26464667606613307,
+        "n_seeds_positive": 2,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.0
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.005967004819585342,
+          "123": 0.008833234179555172,
+          "456": -0.01680762260600427,
+          "789": -0.004871997600960687,
+          "1337": 0.005209922861557192
+        },
+        "delta_mean": -0.0003338916692534499,
+        "delta_bootstrap_ci": [
+          -0.009646247602978119,
+          0.006962080171967644
+        ],
+        "delta_t_ci": [
+          -0.01345167058252657,
+          0.012783887244019668
+        ],
+        "d_z": -0.031604532120348264,
+        "n_seeds_positive": 3,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.0
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.01617724042449753,
+          "123": -0.01784048877943767,
+          "456": -0.024049016044992655,
+          "789": -0.01591342469027235,
+          "1337": -0.014800868496619435
+        },
+        "delta_mean": -0.017756207687163926,
+        "delta_bootstrap_ci": [
+          -0.020957681082207014,
+          -0.01552116535965622
+        ],
+        "delta_t_ci": [
+          -0.02232805924662462,
+          -0.013184356127703233
+        ],
+        "d_z": -4.822388378764668,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.25
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.0018887767949915535,
+          "123": 0.010196338364727775,
+          "456": 0.013680882906575764,
+          "789": -0.0005376088365451892,
+          "1337": 0.0042268639074443115
+        },
+        "delta_mean": 0.005891050627438843,
+        "delta_bootstrap_ci": [
+          0.001385839964867408,
+          0.010625552775889325
+        ],
+        "delta_t_ci": [
+          -0.0014371963590760319,
+          0.013219297613953719
+        ],
+        "d_z": 0.9981521486853149,
+        "n_seeds_positive": 4,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.25
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.014288463629505976,
+          "123": -0.007644150414709894,
+          "456": -0.01036813313841689,
+          "789": -0.016451033526817538,
+          "1337": -0.010574004589175123
+        },
+        "delta_mean": -0.011865157059725084,
+        "delta_bootstrap_ci": [
+          -0.014801939469675096,
+          -0.009319714339085738
+        ],
+        "delta_t_ci": [
+          -0.016194441217984287,
+          -0.00753587290146588
+        ],
+        "d_z": -3.402996388210699,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.25
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.03177718274534569,
+          "123": -0.020092290371098054,
+          "456": -0.041466128493434784,
+          "789": -0.02172605721062648,
+          "1337": -0.001653857156112326
+        },
+        "delta_mean": -0.023343103195323466,
+        "delta_bootstrap_ci": [
+          -0.03371497189496351,
+          -0.011366208916956144
+        ],
+        "delta_t_ci": [
+          -0.041793241689936166,
+          -0.004892964700710767
+        ],
+        "d_z": -1.5709524810586972,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.5
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.022131445363808955,
+          "123": 0.007702616117738481,
+          "456": 0.03271650256942693,
+          "789": 0.024075483108347617,
+          "1337": 0.010218942103535356
+        },
+        "delta_mean": 0.019368997852571467,
+        "delta_bootstrap_ci": [
+          0.011594912361271326,
+          0.02714308334387161
+        ],
+        "delta_t_ci": [
+          0.006528637350230864,
+          0.03220935835491207
+        ],
+        "d_z": 1.8729838083938606,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.5
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.009645737381536734,
+          "123": -0.012389674253359573,
+          "456": -0.008749625924007853,
+          "789": 0.0023494258977211357,
+          "1337": 0.00856508494742303
+        },
+        "delta_mean": -0.003974105342751999,
+        "delta_bootstrap_ci": [
+          -0.010564089838760093,
+          0.003679788671690698
+        ],
+        "delta_t_ci": [
+          -0.015132049745411954,
+          0.007183839059907956
+        ],
+        "d_z": -0.4422412723250391,
+        "n_seeds_positive": 2,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.5
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.015463615705608058,
+          "123": -0.03732175123346415,
+          "456": -0.05077032267890347,
+          "789": -0.032778496070182794,
+          "1337": -0.015658924783860217
+        },
+        "delta_mean": -0.03039862209440374,
+        "delta_bootstrap_ci": [
+          -0.04179252877898361,
+          -0.019004715409823868
+        ],
+        "delta_t_ci": [
+          -0.049115577336611635,
+          -0.011681666852195838
+        ],
+        "d_z": -2.0166140358398454,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.75
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.02656294753863453,
+          "123": 0.02714056607080284,
+          "456": 0.044617309714494846,
+          "789": 0.0238182141340052,
+          "1337": 0.01205020615771879
+        },
+        "delta_mean": 0.02683784872313124,
+        "delta_bootstrap_ci": [
+          0.01797082641651875,
+          0.036846618163224855
+        ],
+        "delta_t_ci": [
+          0.012356764249681436,
+          0.041318933196581045
+        ],
+        "d_z": 2.301180592506571,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.75
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.011099331833026471,
+          "123": -0.01018118516266131,
+          "456": -0.006153012964408622,
+          "789": -0.008960281936177594,
+          "1337": -0.0036087186261414272
+        },
+        "delta_mean": -0.0035607733712724964,
+        "delta_bootstrap_ci": [
+          -0.008887189432417286,
+          0.004145798987352079
+        ],
+        "delta_t_ci": [
+          -0.014217137794318572,
+          0.0070955910517735785
+        ],
+        "d_z": -0.41489610577787456,
+        "n_seeds_positive": 1,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 0.75
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.014209901265084257,
+          "123": -0.031392238252916815,
+          "456": -0.052488085942854146,
+          "789": -0.018594831511284493,
+          "1337": -0.018667874029002274
+        },
+        "delta_mean": -0.027070586200228397,
+        "delta_bootstrap_ci": [
+          -0.0406132794693127,
+          -0.016855467916347955
+        ],
+        "delta_t_ci": [
+          -0.04643185869747821,
+          -0.007709313702978591
+        ],
+        "d_z": -1.7360724766344655,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 1.0
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.02435745563688374,
+          "123": 0.028790577009244145,
+          "456": 0.048581991558061866,
+          "789": 0.029981248195430243,
+          "1337": 0.01459296003362498
+        },
+        "delta_mean": 0.029260846486648995,
+        "delta_bootstrap_ci": [
+          0.020272006823872646,
+          0.039778801464062694
+        ],
+        "delta_t_ci": [
+          0.013886798298282382,
+          0.04463489467501561
+        ],
+        "d_z": 2.36321229088714,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 1.0
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.010147554371799483,
+          "123": -0.0026016612436726705,
+          "456": -0.00390609438479228,
+          "789": 0.01138641668414575,
+          "1337": -0.004074913995377294
+        },
+        "delta_mean": 0.0021902602864205976,
+        "delta_bootstrap_ci": [
+          -0.0037127356008023636,
+          0.00809325617364356
+        ],
+        "delta_t_ci": [
+          -0.00757217795852196,
+          0.011952698531363156
+        ],
+        "d_z": 0.27857460156050623,
+        "n_seeds_positive": 2,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "mean",
+        "strength": 1.0
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.0029767722373784666,
+          "123": -0.000538235826862743,
+          "456": -0.003758753143335347,
+          "789": 0.0021292983207749083,
+          "1337": 0.007501554297397017
+        },
+        "delta_mean": 0.0004714182821190738,
+        "delta_bootstrap_ci": [
+          -0.002801857317658074,
+          0.004285638247693113
+        ],
+        "delta_t_ci": [
+          -0.005183783580532558,
+          0.006126620144770706
+        ],
+        "d_z": 0.10350525466970005,
+        "n_seeds_positive": 2,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.0
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.0006186747917503732,
+          "123": 0.01155329379086023,
+          "456": -0.003515113462566999,
+          "789": -0.006084457225821183,
+          "1337": -0.006857042638811095
+        },
+        "delta_mean": -0.0011043988656178837,
+        "delta_bootstrap_ci": [
+          -0.0058796226383663105,
+          0.005525930889489339
+        ],
+        "delta_t_ci": [
+          -0.010399449192320848,
+          0.00819065146108508
+        ],
+        "d_z": -0.14752930461875322,
+        "n_seeds_positive": 1,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.0
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.00359544702912884,
+          "123": 0.011015057963997488,
+          "456": -0.007273866605902346,
+          "789": -0.003955158905046274,
+          "1337": 0.0006445116585859223
+        },
+        "delta_mean": -0.00063298058349881,
+        "delta_bootstrap_ci": [
+          -0.005210699610205216,
+          0.0052831637889352075
+        ],
+        "delta_t_ci": [
+          -0.009439679588745906,
+          0.008173718421748286
+        ],
+        "d_z": -0.08924447192122834,
+        "n_seeds_positive": 2,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.0
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.002601176262592486,
+          "123": -0.013310654449093517,
+          "456": -0.0075467962488749984,
+          "789": -0.0022536465589194643,
+          "1337": -0.022020827592580505
+        },
+        "delta_mean": -0.009546620222412195,
+        "delta_bootstrap_ci": [
+          -0.016394862697885502,
+          -0.00345128837837978
+        ],
+        "delta_t_ci": [
+          -0.01984569272380199,
+          0.0007524522789775969
+        ],
+        "d_z": -1.1509477803067856,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.25
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.014369761747193843,
+          "123": 0.0084275055498515,
+          "456": 0.01027541261328413,
+          "789": 0.01063486984652473,
+          "1337": 0.027072315619709242
+        },
+        "delta_mean": 0.014155973075312689,
+        "delta_bootstrap_ci": [
+          0.009608141234559197,
+          0.020802842831234614
+        ],
+        "delta_t_ci": [
+          0.004799108632344647,
+          0.023512837518280733
+        ],
+        "d_z": 1.8785098613208178,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.25
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.011768585484601357,
+          "123": -0.004883148899242018,
+          "456": 0.002728616364409131,
+          "789": 0.008381223287605266,
+          "1337": 0.005051488027128737
+        },
+        "delta_mean": 0.004609352852900495,
+        "delta_bootstrap_ci": [
+          -0.0007079214091423314,
+          0.009081746501612309
+        ],
+        "delta_t_ci": [
+          -0.0032269602303225267,
+          0.012445665936123517
+        ],
+        "d_z": 0.7303520713991706,
+        "n_seeds_positive": 4,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.25
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.006194108763227346,
+          "123": -0.015489430591863806,
+          "456": 0.005089847956995963,
+          "789": 0.011905588528709599,
+          "1337": 0.007686745738387346
+        },
+        "delta_mean": 0.0005997285738003511,
+        "delta_bootstrap_ci": [
+          -0.008151362402021833,
+          0.00885490329823797
+        ],
+        "delta_t_ci": [
+          -0.013327218999407163,
+          0.014526676147007866
+        ],
+        "d_z": 0.05346910188809465,
+        "n_seeds_positive": 3,
+        "t_ci_excludes_zero": false,
+        "bootstrap_ci_excludes_zero": false,
+        "passes_dz_gate": false,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.5
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.023380347679223146,
+          "123": 0.025996705754298688,
+          "456": 0.010719135954970871,
+          "789": 0.005399411061172588,
+          "1337": 0.007373553060588622
+        },
+        "delta_mean": 0.014573830702050783,
+        "delta_bootstrap_ci": [
+          0.007253012839698658,
+          0.02189464856440291
+        ],
+        "delta_t_ci": [
+          0.002812226872765621,
+          0.026335434531335945
+        ],
+        "d_z": 1.5385487524751087,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.5
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.0171862389159958,
+          "123": 0.010507275162434881,
+          "456": 0.015808983911966834,
+          "789": 0.017304999589882186,
+          "1337": 0.015060298798975968
+        },
+        "delta_mean": 0.015173559275851133,
+        "delta_bootstrap_ci": [
+          0.012753672640455283,
+          0.01695829218474456
+        ],
+        "delta_t_ci": [
+          0.01172893644332201,
+          0.018618182108380257
+        ],
+        "d_z": 5.469528361571596,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.5
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.026390099455172567,
+          "123": -0.006473390929935041,
+          "456": -0.01985329902162014,
+          "789": -0.004523307443797808,
+          "1337": -0.01909447052528046
+        },
+        "delta_mean": -0.015266913475161204,
+        "delta_bootstrap_ci": [
+          -0.022316253495773174,
+          -0.007979322456589721
+        ],
+        "delta_t_ci": [
+          -0.026917426010977238,
+          -0.00361640093934517
+        ],
+        "d_z": -1.6270852262957396,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.75
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.027009942798654873,
+          "123": 0.018385856265286105,
+          "456": 0.02646933585326694,
+          "789": 0.017855175529907452,
+          "1337": 0.023258003967634222
+        },
+        "delta_mean": 0.022595662882949917,
+        "delta_bootstrap_ci": [
+          0.019148013511604268,
+          0.02604331225429557
+        ],
+        "delta_t_ci": [
+          0.017214635875545798,
+          0.027976689890354036
+        ],
+        "d_z": 5.213915685370755,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.75
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.000619843343482307,
+          "123": 0.011912465335351063,
+          "456": 0.006616036831646799,
+          "789": 0.013331868086109644,
+          "1337": 0.004163533442353762
+        },
+        "delta_mean": 0.007328749407788715,
+        "delta_bootstrap_ci": [
+          0.0032365580806637873,
+          0.011420940734913643
+        ],
+        "delta_t_ci": [
+          0.0007413779187268182,
+          0.013916120896850612
+        ],
+        "d_z": 1.381407486524539,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 0.75
+      },
+      {
+        "contrast": "gmp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": -0.016823855911941354,
+          "123": -0.012995019876284264,
+          "456": -0.00425709634000182,
+          "789": -0.014149353309884205,
+          "1337": -0.013624319677179808
+        },
+        "delta_mean": -0.01236992902305829,
+        "delta_bootstrap_ci": [
+          -0.015418181457857626,
+          -0.008108992401413894
+        ],
+        "delta_t_ci": [
+          -0.018285324477996006,
+          -0.006454533568120572
+        ],
+        "d_z": -2.5964951363389543,
+        "n_seeds_positive": 0,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gmp": 32,
+          "gap": 32
+        },
+        "capacity_confounded": false,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 1.0
+      },
+      {
+        "contrast": "gcp - gmp",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.020717078430472657,
+          "123": 0.024207145101467042,
+          "456": 0.023373385764490884,
+          "789": 0.027178293234181528,
+          "1337": 0.020948164707700334
+        },
+        "delta_mean": 0.02328481344766249,
+        "delta_bootstrap_ci": [
+          0.021340774408167375,
+          0.025338037902342393
+        ],
+        "delta_t_ci": [
+          0.019995521772129727,
+          0.02657410512319525
+        ],
+        "d_z": 8.78970836727958,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gmp": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 1.0
+      },
+      {
+        "contrast": "gcp - gap",
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1337
+        ],
+        "per_seed_delta": {
+          "42": 0.003893222518531303,
+          "123": 0.011212125225182779,
+          "456": 0.019116289424489064,
+          "789": 0.013028939924297323,
+          "1337": 0.007323845030520526
+        },
+        "delta_mean": 0.010914884424604199,
+        "delta_bootstrap_ci": [
+          0.006729252064657287,
+          0.015540330645657009
+        ],
+        "delta_t_ci": [
+          0.0037277001306373625,
+          0.018102068718571035
+        ],
+        "d_z": 1.8856646052561312,
+        "n_seeds_positive": 5,
+        "t_ci_excludes_zero": true,
+        "bootstrap_ci_excludes_zero": true,
+        "passes_dz_gate": true,
+        "classifier_width": {
+          "gcp": 528,
+          "gap": 32
+        },
+        "capacity_confounded": true,
+        "complete_n5": true,
+        "regime": "cov",
+        "strength": 1.0
+      }
+    ]
+  },
+  "verdicts": {
+    "H-MAX-1 (UNSW gmp-gap covers zero)": "FAIL",
+    "H-MAX-2 (synthetic cov s=1.0 gcp-gmp positive)": "PASS",
+    "H-MAX-2b (synthetic cov s=1.0 gmp-gap, two-sided, reported only)": "REPORTED",
+    "H-MAX-3 (UNSW gcp-gmp_wide positive, capacity-clean)": "FAIL"
+  },
+  "drift_check": {
+    "local": "results/maxpool/NF-UNSW-NB15-v2__gap__binary__seed42.json",
+    "published": "results/repro/NF-UNSW-NB15-v2__gap__binary__seed42.json",
+    "local_macro_f1": 0.9382314962724925,
+    "published_macro_f1": 0.9382314962724925,
+    "bit_identical": true,
+    "abs_diff": 0.0
+  }
+}

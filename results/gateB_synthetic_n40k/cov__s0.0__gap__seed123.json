@@ -1,0 +1,9 @@
+{
+  "signal": "cov",
+  "strength": 0.0,
+  "head": "gap",
+  "seed": 123,
+  "val_macro_f1": 0.5001507635069761,
+  "test_macro_f1": 0.5033177897021835,
+  "n_samples": 40000
+}

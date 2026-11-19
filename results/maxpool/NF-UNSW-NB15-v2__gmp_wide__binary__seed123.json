@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/maxpool/NF-UNSW-NB15-v2__gmp_wide__binary__seed123.pt",
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "gmp_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.9430281236582224,
+  "balanced_accuracy": 0.9604642744015566,
+  "auc": 0.989670009677345,
+  "per_family_f1": {
+    "0": 0.9730392156862745,
+    "1": 0.9130170316301703
+  },
+  "confusion_matrix": [
+    [
+      15483,
+      687
+    ],
+    [
+      171,
+      4503
+    ]
+  ],
+  "n_test": 20844
+}

@@ -1,0 +1,9 @@
+{
+  "signal": "mean",
+  "strength": 0.0,
+  "head": "gap",
+  "seed": 123,
+  "val_macro_f1": 0.5046514015669276,
+  "test_macro_f1": 0.4959949689946457,
+  "n_samples": 40000
+}

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Covariance Pooling Beats Mean but Not Max Pooling on Tabular NetFlow: A Mechanistic and Cross-Dataset Study"
+authors:
+  - family-names: Sakib
+    given-names: Nazmus
+  - family-names: Sarker
+    given-names: Md. Shahed Hossan
+  - family-names: Hassan
+    given-names: Sabit
+  - family-names: Bhuiyan
+    given-names: Omar
+  - family-names: Joy
+    given-names: Shaikat Das
+  - family-names: Paul
+    given-names: Shandipan
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Covariance Pooling Beats Mean but Not Max Pooling on Tabular NetFlow: A Mechanistic and Cross-Dataset Study"
+  authors:
+    - family-names: Sakib
+      given-names: Nazmus
+    - family-names: Sarker
+      given-names: Md. Shahed Hossan
+    - family-names: Hassan
+      given-names: Sabit
+    - family-names: Bhuiyan
+      given-names: Omar
+    - family-names: Joy
+      given-names: Shaikat Das
+    - family-names: Paul
+      given-names: Shandipan
+  collection-title: "2026 29th International Conference on Computer and Information Technology (ICCIT)"
+  year: 2026
+  conference:
+    name: "29th International Conference on Computer and Information Technology (ICCIT)"
+    city: "Cox's Bazar"
+    country: BD

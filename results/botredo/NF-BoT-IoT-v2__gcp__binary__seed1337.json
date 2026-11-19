@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/botredo/NF-BoT-IoT-v2__gcp__binary__seed1337.pt",
+  "dataset": "NF-BoT-IoT-v2",
+  "head": "gcp",
+  "label_mode": "binary",
+  "macro_f1": 0.9892126603981153,
+  "balanced_accuracy": 0.989430388842339,
+  "auc": 0.9976119549614503,
+  "per_family_f1": {
+    "0": 0.9912914582175283,
+    "1": 0.9871338625787024
+  },
+  "confusion_matrix": [
+    [
+      2675,
+      26
+    ],
+    [
+      21,
+      1803
+    ]
+  ],
+  "n_test": 4525
+}

@@ -1,0 +1,76 @@
+{
+  "source": "<local>/research_project/ids-compression-benchmark/data/parquet/nf_uq/NF-UQ-NIDS-v2.parquet",
+  "total_rows": 75987976,
+  "rows_counted": 75987976,
+  "n_datasets": 4,
+  "datasets": {
+    "NF-BoT-IoT-v2": {
+      "total": 37763497,
+      "benign": 135037,
+      "attack": 37628460,
+      "benign_pct": 0.358,
+      "attack_pct": 99.642,
+      "attacks": {
+        "DDoS": 18331847,
+        "DoS": 16673183,
+        "Reconnaissance": 2620999,
+        "Benign": 135037,
+        "Theft": 2431
+      }
+    },
+    "NF-CSE-CIC-IDS2018-v2": {
+      "total": 18893708,
+      "benign": 16635567,
+      "attack": 2258141,
+      "benign_pct": 88.048,
+      "attack_pct": 11.952,
+      "attacks": {
+        "Benign": 16635567,
+        "DDoS": 1390270,
+        "DoS": 483999,
+        "Bot": 143097,
+        "Brute Force": 123982,
+        "Infilteration": 116361,
+        "injection": 432
+      }
+    },
+    "NF-ToN-IoT-v2": {
+      "total": 16940496,
+      "benign": 6099469,
+      "attack": 10841027,
+      "benign_pct": 36.005,
+      "attack_pct": 63.995,
+      "attacks": {
+        "Benign": 6099469,
+        "scanning": 3781419,
+        "xss": 2455020,
+        "DDoS": 2026234,
+        "password": 1153323,
+        "DoS": 712609,
+        "injection": 684465,
+        "Backdoor": 16809,
+        "mitm": 7723,
+        "ransomware": 3425
+      }
+    },
+    "NF-UNSW-NB15-v2": {
+      "total": 2390275,
+      "benign": 2295222,
+      "attack": 95053,
+      "benign_pct": 96.023,
+      "attack_pct": 3.977,
+      "attacks": {
+        "Benign": 2295222,
+        "Exploits": 31551,
+        "Fuzzers": 22310,
+        "Generic": 16560,
+        "Reconnaissance": 12779,
+        "DoS": 5794,
+        "Analysis": 2299,
+        "Backdoor": 2169,
+        "Shellcode": 1427,
+        "Worms": 164
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Spearman and Pearson between the per-family coupling contrast index and the per-family GCP minus GAP macro-F1 gain, restricted to families with at least 80000 flows in the source corpus.",
+  "min_flows": 80000,
+  "n_families_kept": 11,
+  "index_published": {
+    "n_units": 11,
+    "pearson_r": -0.38621843848200527,
+    "pearson_bootstrap_ci": [
+      -0.798088223555353,
+      0.9354787095465837
+    ],
+    "pearson_bootstrap_excludes_zero": false,
+    "pearson_fisher_z_ci": [
+      -0.8006066653297896,
+      0.27808380785461984
+    ],
+    "spearman_rho": 0.045454545454545456,
+    "spearman_bootstrap_ci": [
+      -0.6272727272727273,
+      0.8727272727272729
+    ],
+    "spearman_bootstrap_excludes_zero": false,
+    "n_bootstrap_replicates_kept": 10000
+  },
+  "_t_interval_omitted": "No Student-t interval is reported. These quantities are Pearson and Spearman correlations computed once over 15 attack-family units (11 in the restricted variant). There is no n=5 seed sample and no mean, so defect 2.2 of notes/20260720-bug-prepublication-code-audit.md does not describe them and a t interval for a mean is undefined for a correlation. The honest uncertainty statement is a resampling interval over the family units, which is what this file reports. The file is therefore named *_ci.json and not *_tci.json, so the name does not promise an interval the file does not contain",
+  "_fisher_z_caveat": "fisher_z_ci assumes the units are independent draws from a bivariate normal. These 15 families are not: they are pooled across two datasets (9 from NF-ToN-IoT-v2, 6 from NF-CSE-CIC-IDS2018-v2), families within a dataset share one trained model pair and one feature encoding, and the gcp_gain values are seed-averaged rather than single draws. Read it as a second opinion on the bootstrap, not as a coverage guarantee",
+  "_interval_method": "percentile bootstrap over the attack-family units, 10,000 resamples, percentiles 2.5 and 97.5, RNG seed 20260711 (the seed the published pearson_ci95 used). Student-t for a mean is deliberately NOT applied here",
+  "_supersedes": "results/efc/efc_gcp_correlation_restricted.json",
+  "_generated_by": "scripts/recompute_missing_tci.py",
+  "_reason": "correlations over family units; bootstrap over families, not Student-t for a mean"
+}

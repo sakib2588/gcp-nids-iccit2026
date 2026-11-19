@@ -1,0 +1,32 @@
+{
+  "eranks": {
+    "NF-UNSW-NB15-v2": 12.828673096006007,
+    "NF-CSE-CIC-IDS2018-v2": 14.726713346610016,
+    "NF-ToN-IoT-v2": 14.100831465221288,
+    "NF-BoT-IoT-v2": 16.56052564128083
+  },
+  "deltas": {
+    "NF-UNSW-NB15-v2": 0.004575350100826658,
+    "NF-BoT-IoT-v2": 0.0038060821100696085,
+    "NF-CSE-CIC-IDS2018-v2": 0.0004499910773050342,
+    "NF-ToN-IoT-v2": 0.01588248663571612
+  },
+  "pearson_r": -0.23597256681387763,
+  "delta_ci": {
+    "NF-CSE-CIC-IDS2018-v2": [
+      0.00044999107730516743,
+      7.120666576872908e-06,
+      0.000892861488033462
+    ],
+    "NF-ToN-IoT-v2": [
+      0.015882486635716165,
+      0.012335898998886482,
+      0.019429074272545848
+    ]
+  },
+  "_interval_method": "Student-t, df = n-1, two-sided 95 percent, sd with ddof=1",
+  "_supersedes": "results/gateC/gateC_summary.json",
+  "_generated_by": "scripts/recompute_t_intervals.py",
+  "_reason": "defect 2.2, notes/20260720-bug-prepublication-code-audit.md: percentile bootstrap of a mean at n=5 has 0.839 coverage",
+  "_note": "delta_ci is new; gateC_summary.json published point deltas with no interval"
+}

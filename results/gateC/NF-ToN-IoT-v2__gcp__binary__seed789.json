@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/gateC/NF-ToN-IoT-v2__gcp__binary__seed789.pt",
+  "dataset": "NF-ToN-IoT-v2",
+  "head": "gcp",
+  "label_mode": "binary",
+  "macro_f1": 0.9414421106519321,
+  "balanced_accuracy": 0.9321744166173667,
+  "auc": 0.9826686456758476,
+  "per_family_f1": {
+    "0": 0.8917338858876638,
+    "1": 0.9911503354162003
+  },
+  "confusion_matrix": [
+    [
+      6025,
+      890
+    ],
+    [
+      573,
+      81927
+    ]
+  ],
+  "n_test": 89415
+}

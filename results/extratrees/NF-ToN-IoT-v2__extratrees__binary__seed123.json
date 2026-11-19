@@ -1,0 +1,12 @@
+{
+  "macro_f1": 0.9644863872552143,
+  "val_macro_f1": 0.9638296525887298,
+  "dataset": "NF-ToN-IoT-v2",
+  "head": "extratrees",
+  "label_mode": "binary",
+  "seed": 123,
+  "n_test": 89415,
+  "n_features": 39,
+  "n_estimators": 100,
+  "fit_predict_seconds": 105.4
+}

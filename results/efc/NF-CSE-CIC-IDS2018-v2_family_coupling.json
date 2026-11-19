@@ -1,0 +1,49 @@
+{
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "n_features": 38,
+  "n_bins": 30,
+  "ridge": 0.001,
+  "benign_class": "Benign",
+  "benign_id": 0,
+  "fit_row_cap": 80000,
+  "score_row_cap": 40000,
+  "subsample_seed": 42,
+  "families": {
+    "Bot": {
+      "off": 304.5695719259314,
+      "diag": 405.6379622605048,
+      "cov_signal_index": 0.4288458756986081,
+      "n_rows": 100167
+    },
+    "Brute Force": {
+      "off": 354.0740823980644,
+      "diag": 353.79350633586336,
+      "cov_signal_index": 0.5001981840012641,
+      "n_rows": 86788
+    },
+    "DDoS": {
+      "off": 293.447976126568,
+      "diag": 394.70402709006555,
+      "cov_signal_index": 0.42642900806057693,
+      "n_rows": 280000
+    },
+    "DoS": {
+      "off": 277.4099611831139,
+      "diag": 327.90014534831374,
+      "cov_signal_index": 0.45829395245478327,
+      "n_rows": 280000
+    },
+    "Infilteration": {
+      "off": 155.1820261630334,
+      "diag": 55.49457284044,
+      "cov_signal_index": 0.7365888138362957,
+      "n_rows": 81453
+    },
+    "injection": {
+      "off": 337.1066882946653,
+      "diag": 408.23614134315903,
+      "cov_signal_index": 0.45228406967901147,
+      "n_rows": 302
+    }
+  }
+}

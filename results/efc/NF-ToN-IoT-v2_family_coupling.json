@@ -1,0 +1,67 @@
+{
+  "dataset": "NF-ToN-IoT-v2",
+  "n_features": 39,
+  "n_bins": 30,
+  "ridge": 0.001,
+  "benign_class": "Benign",
+  "benign_id": 1,
+  "fit_row_cap": 80000,
+  "score_row_cap": 40000,
+  "subsample_seed": 42,
+  "families": {
+    "Backdoor": {
+      "off": 134.1264358198107,
+      "diag": 73.94583255424432,
+      "cov_signal_index": 0.6446146661826618,
+      "n_rows": 11766
+    },
+    "DDoS": {
+      "off": 45.735779434547815,
+      "diag": 26.034034129831042,
+      "cov_signal_index": 0.6372564893668278,
+      "n_rows": 280000
+    },
+    "DoS": {
+      "off": 98.54881612278385,
+      "diag": 54.44979247974964,
+      "cov_signal_index": 0.6441157669531381,
+      "n_rows": 280000
+    },
+    "injection": {
+      "off": 38.97458693577268,
+      "diag": 21.60422165132874,
+      "cov_signal_index": 0.643369981100474,
+      "n_rows": 280000
+    },
+    "mitm": {
+      "off": 52.8785164930062,
+      "diag": 26.92364584203361,
+      "cov_signal_index": 0.6626200963202237,
+      "n_rows": 5406
+    },
+    "password": {
+      "off": 51.63349708737096,
+      "diag": 24.403702306440994,
+      "cov_signal_index": 0.6790557450696032,
+      "n_rows": 280000
+    },
+    "ransomware": {
+      "off": 52.87007337853248,
+      "diag": 38.19427179666205,
+      "cov_signal_index": 0.5805792956268248,
+      "n_rows": 2397
+    },
+    "scanning": {
+      "off": 62.95117397976056,
+      "diag": 23.07001346232333,
+      "cov_signal_index": 0.7318101022744444,
+      "n_rows": 280000
+    },
+    "xss": {
+      "off": 58.55591572198217,
+      "diag": 31.785454737382086,
+      "cov_signal_index": 0.6481628009874031,
+      "n_rows": 280000
+    }
+  }
+}

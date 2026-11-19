@@ -1,0 +1,248 @@
+{
+  "datasets": {
+    "NF-UNSW-NB15-v2": {
+      "hgb_macro_f1_t_ci": [
+        0.9508310471325714,
+        0.9502934265942095,
+        0.9513686676709333
+      ],
+      "per_seed": [
+        0.9513806666847942,
+        0.9506799670115653,
+        0.9511950213935172,
+        0.9504798119246012,
+        0.9504197686483801
+      ],
+      "best_iter_per_seed": [
+        185,
+        258,
+        189,
+        182,
+        297
+      ],
+      "n_seeds_budget_limited": 0,
+      "cnn": {
+        "gap": {
+          "macro_f1_t_ci": [
+            0.9390087127981769,
+            0.9369284281539321,
+            0.9410889974424217
+          ],
+          "n": 5,
+          "source_dir": "results/repro"
+        },
+        "se": {
+          "macro_f1_t_ci": [
+            0.9404254115486603,
+            0.9381240257676453,
+            0.9427267973296753
+          ],
+          "n": 5,
+          "source_dir": "results/repro"
+        },
+        "gcp": {
+          "macro_f1_t_ci": [
+            0.9435840628990035,
+            0.9428217036405714,
+            0.9443464221574357
+          ],
+          "n": 5,
+          "source_dir": "results/repro"
+        }
+      },
+      "verdict_vs": {
+        "gap": "tree_wins",
+        "se": "tree_wins",
+        "gcp": "tree_wins"
+      }
+    },
+    "NF-BoT-IoT-v2": {
+      "hgb_macro_f1_t_ci": [
+        0.993659761563794,
+        0.9928888150134133,
+        0.9944307081141747
+      ],
+      "per_seed": [
+        0.9940245385511479,
+        0.9926482295637029,
+        0.9937997155100897,
+        0.9942579712682841,
+        0.9935683529257446
+      ],
+      "best_iter_per_seed": [
+        51,
+        99,
+        72,
+        95,
+        75
+      ],
+      "n_seeds_budget_limited": 0,
+      "cnn": {
+        "gap": {
+          "macro_f1_t_ci": [
+            0.9846190830047151,
+            0.9828430650563572,
+            0.986395100953073
+          ],
+          "n": 5,
+          "source_dir": "results/gap4"
+        },
+        "se": {
+          "macro_f1_t_ci": [
+            0.9832181535575872,
+            0.9811876025884292,
+            0.9852487045267453
+          ],
+          "n": 5,
+          "source_dir": "results/gap4"
+        },
+        "gcp": {
+          "macro_f1_t_ci": [
+            0.9884251651147847,
+            0.9859971250880731,
+            0.9908532051414963
+          ],
+          "n": 5,
+          "source_dir": "results/gap4"
+        }
+      },
+      "verdict_vs": {
+        "gap": "tree_wins",
+        "se": "tree_wins",
+        "gcp": "tree_wins"
+      }
+    },
+    "NF-CSE-CIC-IDS2018-v2": {
+      "hgb_macro_f1_t_ci": [
+        0.8805961312436663,
+        0.880413889812626,
+        0.8807783726747066
+      ],
+      "per_seed": [
+        0.8804351833712815,
+        0.8808114301139734,
+        0.8806201154540105,
+        0.8804853160963793,
+        0.8806286111826866
+      ],
+      "best_iter_per_seed": [
+        470,
+        449,
+        466,
+        453,
+        414
+      ],
+      "n_seeds_budget_limited": 0,
+      "cnn": {
+        "gap": {
+          "macro_f1_t_ci": [
+            0.8778748248904448,
+            0.8776263008861055,
+            0.878123348894784
+          ],
+          "n": 5,
+          "source_dir": "results/gateC"
+        },
+        "se": {
+          "macro_f1_t_ci": [
+            0.878405382690094,
+            0.878161732083622,
+            0.8786490332965661
+          ],
+          "n": 5,
+          "source_dir": "results/gateC"
+        },
+        "gcp": {
+          "macro_f1_t_ci": [
+            0.8783248159677498,
+            0.8781134352981009,
+            0.8785361966373987
+          ],
+          "n": 5,
+          "source_dir": "results/gateC"
+        }
+      },
+      "verdict_vs": {
+        "gap": "tree_wins",
+        "se": "tree_wins",
+        "gcp": "tree_wins"
+      }
+    },
+    "NF-ToN-IoT-v2": {
+      "hgb_macro_f1_t_ci": [
+        0.9651854133637535,
+        0.9638288423869671,
+        0.96654198434054
+      ],
+      "per_seed": [
+        0.9660896922265487,
+        0.9656467646670642,
+        0.9655662679350672,
+        0.9632938688482209,
+        0.9653304731418658
+      ],
+      "best_iter_per_seed": [
+        495,
+        316,
+        489,
+        265,
+        404
+      ],
+      "n_seeds_budget_limited": 0,
+      "cnn": {
+        "gap": {
+          "macro_f1_t_ci": [
+            0.9267881462621583,
+            0.9234629284677758,
+            0.9301133640565409
+          ],
+          "n": 5,
+          "source_dir": "results/gateC"
+        },
+        "se": {
+          "macro_f1_t_ci": [
+            0.9348850662592982,
+            0.9321613214873427,
+            0.9376088110312538
+          ],
+          "n": 5,
+          "source_dir": "results/gateC"
+        },
+        "gcp": {
+          "macro_f1_t_ci": [
+            0.9426706328978744,
+            0.9409369499110436,
+            0.9444043158847053
+          ],
+          "n": 5,
+          "source_dir": "results/gateC"
+        }
+      },
+      "verdict_vs": {
+        "gap": "tree_wins",
+        "se": "tree_wins",
+        "gcp": "tree_wins"
+      }
+    }
+  },
+  "_comparability": {
+    "interval_widths": "NOT comparable across model families. CNN seed variance is weight init and batch order; HGB is deterministic given random_state except for the binning subsample (measured SD ~9e-4). 'The tree is more stable' would be an artefact.",
+    "compute_budget": "NOT matched. 20 CNN epochs against 500 boosting iterations, neither tuned.",
+    "iteration_ceiling": "check n_seeds_budget_limited: if non-zero, val macro-F1 was still rising at the last iteration and the tree was budget-limited.",
+    "point_estimates": "comparable -- same splits, same selection rule, same seeds."
+  },
+  "_label_mode_coverage": "binary only; results/multiclass/ has no tree anchor, so the 15-family analysis is unanchored by this baseline.",
+  "_comparators": {
+    "NF-UNSW-NB15-v2": "results/repro",
+    "NF-BoT-IoT-v2": "results/gap4",
+    "NF-CSE-CIC-IDS2018-v2": "results/gateC",
+    "NF-ToN-IoT-v2": "results/gateC"
+  },
+  "_method": {
+    "model": "sklearn HistGradientBoostingClassifier, early_stopping=False",
+    "selection": "boosting iteration argmax of val macro-F1 (mirrors the CNN's best-epoch-by-val rule)",
+    "test_policy": "read once, at the selected iteration",
+    "interval": "Student-t, df = n-1",
+    "verdict_rule": "overlapping Student-t intervals count as a tie"
+  }
+}

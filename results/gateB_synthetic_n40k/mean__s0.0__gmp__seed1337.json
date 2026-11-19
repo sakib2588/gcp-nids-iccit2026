@@ -1,0 +1,9 @@
+{
+  "signal": "mean",
+  "strength": 0.0,
+  "head": "gmp",
+  "seed": 1337,
+  "val_macro_f1": 0.49498378336815485,
+  "test_macro_f1": 0.4948596832453459,
+  "n_samples": 40000
+}

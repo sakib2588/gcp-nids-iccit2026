@@ -1,0 +1,234 @@
+{
+  "description": "Per-family coupling contrast index versus per-family GCP minus GAP macro-F1 gain, under the published index and under the two audit corrections. The published files are left untouched.",
+  "n_families": 15,
+  "datasets": [
+    "NF-ToN-IoT-v2",
+    "NF-CSE-CIC-IDS2018-v2"
+  ],
+  "variants": {
+    "index_published": {
+      "pearson_r": -0.3557266049607721,
+      "spearman_rho": -0.06428571428571428,
+      "min": 0.42642900806057693,
+      "max": 0.7365888138362957,
+      "spearman_vs_block_normalised": 1.0,
+      "spearman_vs_corrected": 0.6321428571428571
+    },
+    "index_block_normalised": {
+      "pearson_r": -0.3795897213132623,
+      "spearman_rho": -0.06428571428571428,
+      "min": 0.019697804037206956,
+      "max": 0.07026640057846903
+    },
+    "index_corrected": {
+      "pearson_r": 0.16034302974977663,
+      "spearman_rho": 0.34642857142857136,
+      "min": 0.034228558862196834,
+      "max": 0.09793519120286621
+    },
+    "index_corrected_unnormalised": {
+      "pearson_r": -0.14865984208483118,
+      "spearman_rho": 0.1464285714285714,
+      "min": 0.4980844237195528,
+      "max": 0.7650946634997914
+    }
+  },
+  "restricted_to_large_families": {
+    "min_flows": 80000,
+    "n_families": 11,
+    "index_published": {
+      "pearson_r": -0.38621843848200527,
+      "spearman_rho": 0.045454545454545456
+    },
+    "index_block_normalised": {
+      "pearson_r": -0.4368047728870744,
+      "spearman_rho": 0.045454545454545456
+    },
+    "index_corrected": {
+      "pearson_r": -0.21057686437496498,
+      "spearman_rho": 0.15454545454545454
+    }
+  },
+  "rows": [
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "Backdoor",
+      "gcp_gain": 0.29399371715343464,
+      "index_published": 0.6446146661826618,
+      "index_block_normalised": 0.045558197874328764,
+      "index_corrected": 0.06508777616449198,
+      "index_corrected_unnormalised": 0.6609405924469691,
+      "marginal_over_covariance_ratio_published": 20.949946368784754,
+      "n_active_features_corrected": 29,
+      "n_active_columns_corrected": 83
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "DDoS",
+      "gcp_gain": 0.016334820440343067,
+      "index_published": 0.6372564893668278,
+      "index_block_normalised": 0.04418791749796315,
+      "index_corrected": 0.04480305970562966,
+      "index_corrected_unnormalised": 0.6001511159251338,
+      "marginal_over_covariance_ratio_published": 21.630620690511048,
+      "n_active_features_corrected": 33,
+      "n_active_columns_corrected": 104
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "DoS",
+      "gcp_gain": 0.013814743332617119,
+      "index_published": 0.6441157669531381,
+      "index_block_normalised": 0.04546362579835716,
+      "index_corrected": 0.05239853540173588,
+      "index_corrected_unnormalised": 0.6075795169231659,
+      "marginal_over_covariance_ratio_published": 20.99560599137553,
+      "n_active_features_corrected": 29,
+      "n_active_columns_corrected": 97
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "injection",
+      "gcp_gain": 0.01749214613808614,
+      "index_published": 0.643369981100474,
+      "index_block_normalised": 0.04532271217797262,
+      "index_corrected": 0.04291640604349523,
+      "index_corrected_unnormalised": 0.5816013703659724,
+      "marginal_over_covariance_ratio_published": 21.06399290654128,
+      "n_active_features_corrected": 32,
+      "n_active_columns_corrected": 104
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "mitm",
+      "gcp_gain": 0.03344261168327034,
+      "index_published": 0.6626200963202237,
+      "index_block_normalised": 0.04914465050695476,
+      "index_corrected": 0.06676061961272431,
+      "index_corrected_unnormalised": 0.6747498544681346,
+      "marginal_over_covariance_ratio_published": 19.348094648846548,
+      "n_active_features_corrected": 30,
+      "n_active_columns_corrected": 99
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "password",
+      "gcp_gain": 0.022802105570924214,
+      "index_published": 0.6790557450696032,
+      "index_block_normalised": 0.052742450099947366,
+      "index_corrected": 0.058914249857291025,
+      "index_corrected_unnormalised": 0.6599420394577314,
+      "marginal_over_covariance_ratio_published": 17.960059650338426,
+      "n_active_features_corrected": 32,
+      "n_active_columns_corrected": 107
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "ransomware",
+      "gcp_gain": 0.2771387507834262,
+      "index_published": 0.5805792956268248,
+      "index_block_normalised": 0.03514707592986416,
+      "index_corrected": 0.04642448464147565,
+      "index_corrected_unnormalised": 0.5679385130878989,
+      "marginal_over_covariance_ratio_published": 27.451868997452188,
+      "n_active_features_corrected": 28,
+      "n_active_columns_corrected": 93
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "scanning",
+      "gcp_gain": 0.04748140731477196,
+      "index_published": 0.7318101022744444,
+      "index_block_normalised": 0.0669970105182792,
+      "index_corrected": 0.09793519120286621,
+      "index_corrected_unnormalised": 0.7650946634997914,
+      "marginal_over_covariance_ratio_published": 13.926039121210698,
+      "n_active_features_corrected": 31,
+      "n_active_columns_corrected": 109
+    },
+    {
+      "dataset": "NF-ToN-IoT-v2",
+      "family": "xss",
+      "gcp_gain": 0.013301015032494035,
+      "index_published": 0.6481628009874031,
+      "index_block_normalised": 0.0462379721709802,
+      "index_corrected": 0.040526736160278576,
+      "index_corrected_unnormalised": 0.5505450814081723,
+      "marginal_over_covariance_ratio_published": 20.627246028484322,
+      "n_active_features_corrected": 30,
+      "n_active_columns_corrected": 103
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Bot",
+      "gcp_gain": 0.11379097490863488,
+      "index_published": 0.4288458756986081,
+      "index_block_normalised": 0.01988938207285177,
+      "index_corrected": 0.03753587793454192,
+      "index_corrected_unnormalised": 0.503474186297085,
+      "marginal_over_covariance_ratio_published": 49.27808286537775,
+      "n_active_features_corrected": 27,
+      "n_active_columns_corrected": 108
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Brute Force",
+      "gcp_gain": 0.001720766737867807,
+      "index_published": 0.5001981840012641,
+      "index_block_normalised": 0.02633610959168538,
+      "index_corrected": 0.04060355098958607,
+      "index_corrected_unnormalised": 0.5827465919405892,
+      "marginal_over_covariance_ratio_published": 36.97068038916848,
+      "n_active_features_corrected": 34,
+      "n_active_columns_corrected": 167
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "DDoS",
+      "gcp_gain": 0.0023511536364786423,
+      "index_published": 0.42642900806057693,
+      "index_block_normalised": 0.019697804037206956,
+      "index_corrected": 0.04406734231274482,
+      "index_corrected_unnormalised": 0.5803545164047861,
+      "marginal_over_covariance_ratio_published": 49.76708033601672,
+      "n_active_features_corrected": 31,
+      "n_active_columns_corrected": 114
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "DoS",
+      "gcp_gain": 0.0002705027018706785,
+      "index_published": 0.45829395245478327,
+      "index_block_normalised": 0.022354256612939136,
+      "index_corrected": 0.034228558862196834,
+      "index_corrected_unnormalised": 0.4980844237195528,
+      "marginal_over_covariance_ratio_published": 43.73420956531285,
+      "n_active_features_corrected": 29,
+      "n_active_columns_corrected": 168
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "Infilteration",
+      "gcp_gain": -0.11135833010665139,
+      "index_published": 0.7365888138362957,
+      "index_block_normalised": 0.07026640057846903,
+      "index_corrected": 0.0733124209513811,
+      "index_corrected_unnormalised": 0.7401277229234445,
+      "marginal_over_covariance_ratio_published": 13.231552943760992,
+      "n_active_features_corrected": 37,
+      "n_active_columns_corrected": 348
+    },
+    {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "injection",
+      "gcp_gain": 0.75,
+      "index_published": 0.45228406967901147,
+      "index_block_normalised": 0.02183072760513378,
+      "index_corrected": 0.06605314604313288,
+      "index_corrected_unnormalised": 0.5858346760241366,
+      "marginal_over_covariance_ratio_published": 44.806993614122,
+      "n_active_features_corrected": 21,
+      "n_active_columns_corrected": 90
+    }
+  ]
+}

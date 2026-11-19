@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/gapwide/NF-CSE-CIC-IDS2018-v2__gap_wide__binary__seed789.pt",
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "head": "gap_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.8779967702592667,
+  "balanced_accuracy": 0.9000808223520658,
+  "auc": 0.9205848528612122,
+  "per_family_f1": {
+    "0": 0.8662858816637375,
+    "1": 0.8897076588547959
+  },
+  "confusion_matrix": [
+    [
+      35490,
+      86
+    ],
+    [
+      10870,
+      44190
+    ]
+  ],
+  "n_test": 90636
+}

@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/botredo/NF-BoT-IoT-v2__gap__binary__seed1337.pt",
+  "dataset": "NF-BoT-IoT-v2",
+  "head": "gap",
+  "label_mode": "binary",
+  "macro_f1": 0.9841491654279857,
+  "balanced_accuracy": 0.9839337241892216,
+  "auc": 0.9964623847892593,
+  "per_family_f1": {
+    "0": 0.9872387645644535,
+    "1": 0.981059566291518
+  },
+  "confusion_matrix": [
+    [
+      2669,
+      32
+    ],
+    [
+      37,
+      1787
+    ]
+  ],
+  "n_test": 4525
+}

@@ -1,0 +1,14 @@
+{
+  "best_iter": 489,
+  "n_iter_fitted": 500,
+  "val_macro_f1": 0.9673552939439609,
+  "val_macro_f1_at_last_iter": 0.9665753336574505,
+  "budget_limited": false,
+  "macro_f1": 0.9655662679350672,
+  "dataset": "NF-ToN-IoT-v2",
+  "head": "hgb",
+  "label_mode": "binary",
+  "seed": 456,
+  "n_test": 89415,
+  "n_features": 39
+}

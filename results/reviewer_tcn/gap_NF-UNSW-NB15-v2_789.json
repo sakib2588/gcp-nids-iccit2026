@@ -1,0 +1,162 @@
+{
+  "run_id": "NF-UNSW-NB15-v2_tcn_gap_seed789",
+  "dataset": "NF-UNSW-NB15-v2",
+  "backbone": "tcn",
+  "head": "gap",
+  "seed": 789,
+  "label_mode": "binary",
+  "smoke": false,
+  "epochs": 20,
+  "batch_size": 512,
+  "lr": 0.001,
+  "c_last": 32,
+  "n_params": 12690,
+  "lprime": 39,
+  "pooled_dim": 32,
+  "best_val_macro_f1": 0.945331032031113,
+  "best_epoch": 17,
+  "gcp_nan_events": 0,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.01685184568387997,
+      "val_macro_f1": 0.9356765222417958
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.01027588973220714,
+      "val_macro_f1": 0.9357242073155775
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.009650207244708912,
+      "val_macro_f1": 0.9384381293501287
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.009376356240551328,
+      "val_macro_f1": 0.9334358433511922
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.009059669769037595,
+      "val_macro_f1": 0.9284712196383857
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.00894621159368992,
+      "val_macro_f1": 0.9395129011645488
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.008737267134161406,
+      "val_macro_f1": 0.9420539178154053
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.008628949433963863,
+      "val_macro_f1": 0.9425526845892116
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.008477482884040365,
+      "val_macro_f1": 0.9358833190937749
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.00842276189232175,
+      "val_macro_f1": 0.9318327195330014
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.008314696928962086,
+      "val_macro_f1": 0.9419411230435882
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.008252570483676561,
+      "val_macro_f1": 0.9360168506287752
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.008180714136202543,
+      "val_macro_f1": 0.941165889864904
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.008096755070912641,
+      "val_macro_f1": 0.9433202931311329
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.0080394491021532,
+      "val_macro_f1": 0.9447405135765943
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.007989390456147707,
+      "val_macro_f1": 0.9425706386671018
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.00798849096835874,
+      "val_macro_f1": 0.9424442017911778
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.007933983877405376,
+      "val_macro_f1": 0.945331032031113
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.007895225430067182,
+      "val_macro_f1": 0.9401892782088684
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.007874248251068104,
+      "val_macro_f1": 0.9436771321346149
+    }
+  ],
+  "test": {
+    "macro_f1": 0.9458639420597685,
+    "balanced_accuracy": 0.9573117542033736,
+    "auc": 0.9904606569745025,
+    "per_family_f1": {
+      "0": 0.9748461081773584,
+      "1": 0.9168817759421787
+    },
+    "confusion_matrix": [
+      [
+        15599,
+        571
+      ],
+      [
+        234,
+        4440
+      ]
+    ],
+    "n_test": 20844
+  },
+  "split_checksums": {
+    "train_X": "af1cbfa1f3df61c5",
+    "val_X": "6edf36544b219f02",
+    "test_X": "b6bfce3bf41dccfa"
+  },
+  "split_meta": {
+    "n_train": 1673191,
+    "n_val": 23214,
+    "n_test": 20844,
+    "n_features": 39,
+    "seed": 42,
+    "dedup_policy": "leakage-only"
+  },
+  "data_dir": "/workspace/ML-paper/data/processed",
+  "device": "cuda",
+  "python": "3.11.10",
+  "torch": "2.5.1+cu124",
+  "git_head": "unknown",
+  "runtime_seconds": 963.126908789156,
+  "finished_at": "2026-11-18 12:43:07 PM",
+  "log_file": "/workspace/ML-paper/reviewer_runs_2026-11-18/results/tcn/logs/NF-UNSW-NB15-v2_tcn_gap_seed789_20261118_122702PM.log"
+}

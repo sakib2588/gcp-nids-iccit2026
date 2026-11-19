@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/gapwide/NF-BoT-IoT-v2__gap_wide__binary__seed42.pt",
+  "dataset": "NF-BoT-IoT-v2",
+  "head": "gap_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.9853043382243094,
+  "balanced_accuracy": 0.9853043382243094,
+  "auc": 0.9960349115337398,
+  "per_family_f1": {
+    "0": 0.9881525360977416,
+    "1": 0.9824561403508771
+  },
+  "confusion_matrix": [
+    [
+      2669,
+      32
+    ],
+    [
+      32,
+      1792
+    ]
+  ],
+  "n_test": 4525
+}

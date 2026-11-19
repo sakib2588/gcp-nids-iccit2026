@@ -1,0 +1,939 @@
+{
+  "generated_utc": "2026-07-21T16:28:58+00:00",
+  "config": {
+    "dataset": "NF-UNSW-NB15-v2",
+    "label_mode": "binary",
+    "heads": [
+      "gap",
+      "gcp"
+    ],
+    "seeds": [
+      42,
+      123,
+      456,
+      789,
+      1337
+    ],
+    "devices": [
+      "cuda",
+      "cpu"
+    ],
+    "batch_sizes": [
+      1,
+      512
+    ],
+    "n_iters": 200,
+    "warmup": 20,
+    "ckpt_dir": "checkpoints/repro",
+    "data_dir": "<local>/scripts/../data/processed",
+    "n_test_pool": 20844,
+    "in_features": 39,
+    "row_draw_seed": 0,
+    "timer": "time.perf_counter, cuda.synchronize on both sides of every CUDA iteration"
+  },
+  "environment": {
+    "torch": "2.12.1+cu130",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "cudnn_benchmark": false,
+    "torch_num_threads": 6,
+    "python": "3.12.3",
+    "platform": "Linux-6.18.7-76061807-generic-x86_64-with-glibc2.39",
+    "processor": "x86_64"
+  },
+  "model": {
+    "gap": {
+      "n_params_per_seed": {
+        "42": 4962,
+        "123": 4962,
+        "456": 4962,
+        "789": 4962,
+        "1337": 4962
+      },
+      "n_params": 4962,
+      "n_params_identical_across_seeds": true,
+      "c_last": 32,
+      "pooled_feature_dim": 32,
+      "pooled_feature_dim_formula": "C"
+    },
+    "gcp": {
+      "n_params_per_seed": {
+        "42": 5954,
+        "123": 5954,
+        "456": 5954,
+        "789": 5954,
+        "1337": 5954
+      },
+      "n_params": 5954,
+      "n_params_identical_across_seeds": true,
+      "c_last": 32,
+      "pooled_feature_dim": 528,
+      "pooled_feature_dim_formula": "C(C+1)/2"
+    },
+    "_ratio_gcp_over_gap": {
+      "pooled_feature_dim": 16.5,
+      "n_params": 1.199919387343813
+    }
+  },
+  "conditions": [
+    {
+      "device": "cuda",
+      "batch_size": 1,
+      "head": "gap",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.24499699975422118,
+            "p99_ms": 0.7173686912938136,
+            "mean_ms": 0.28878060506031034,
+            "min_ms": 0.16121799853863195,
+            "max_ms": 0.7954979992064182,
+            "throughput_flows_per_s": 4081.6826369432733
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.2899310002248967,
+            "p99_ms": 0.4618322001988417,
+            "mean_ms": 0.3052520548226312,
+            "min_ms": 0.23280700042960234,
+            "max_ms": 0.4968330031260848,
+            "throughput_flows_per_s": 3449.096506493992
+          }
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.230151999858208,
+            "p99_ms": 0.5309678933917891,
+            "mean_ms": 0.2542031599659822,
+            "min_ms": 0.17145799938589334,
+            "max_ms": 1.2825719968532212,
+            "throughput_flows_per_s": 4344.954641350411
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.21142199875612278,
+            "p99_ms": 0.357471300412726,
+            "mean_ms": 0.23989940480532823,
+            "min_ms": 0.19321699801366776,
+            "max_ms": 0.4902030013909098,
+            "throughput_flows_per_s": 4729.876767239862
+          }
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.2485410004737787,
+            "p99_ms": 0.4690122988904476,
+            "mean_ms": 0.2602835599827813,
+            "min_ms": 0.22191700190887786,
+            "max_ms": 0.5528520014195237,
+            "throughput_flows_per_s": 4023.4810276524213
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.27464099912322126,
+            "p99_ms": 0.47697800004243596,
+            "mean_ms": 0.2861356098219403,
+            "min_ms": 0.2502860006643459,
+            "max_ms": 0.5448020019684918,
+            "throughput_flows_per_s": 3641.116960659384
+          }
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.2939260011771694,
+            "p99_ms": 0.5026699903100956,
+            "mean_ms": 0.3069109299212869,
+            "min_ms": 0.23812599829398096,
+            "max_ms": 0.7812290023139212,
+            "throughput_flows_per_s": 3402.2168708961253
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.3214605021639727,
+            "p99_ms": 0.5457072905483069,
+            "mean_ms": 0.33002869502524845,
+            "min_ms": 0.26425699979881756,
+            "max_ms": 0.6893000027048402,
+            "throughput_flows_per_s": 3110.802083827746
+          }
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.30519099891535006,
+            "p99_ms": 0.5708029799279747,
+            "mean_ms": 0.32575147997704335,
+            "min_ms": 0.2619859988044482,
+            "max_ms": 1.1394430002837908,
+            "throughput_flows_per_s": 3276.636609709997
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.33962499946937896,
+            "p99_ms": 0.5619050996028818,
+            "mean_ms": 0.35138295503202244,
+            "min_ms": 0.29802599965478294,
+            "max_ms": 0.6177320028655231,
+            "throughput_flows_per_s": 2944.4240016558656
+          }
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 0.2485410004737787,
+        "p99_ms_across_seeds": 0.5309678933917891,
+        "throughput_flows_per_s_across_seeds": 4023.4810276524213
+      },
+      "with_transfer": {
+        "median_ms_across_seeds": 0.2899310002248967,
+        "p99_ms_across_seeds": 0.47697800004243596,
+        "throughput_flows_per_s_across_seeds": 3449.096506493992
+      }
+    },
+    {
+      "device": "cuda",
+      "batch_size": 1,
+      "head": "gcp",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.2410869985615136,
+            "p99_ms": 2.4833638996278746,
+            "mean_ms": 1.3302345699958096,
+            "min_ms": 0.8553580009902362,
+            "max_ms": 2.7948200004175305,
+            "throughput_flows_per_s": 805.7452871225415
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 1.3003719996049767,
+            "p99_ms": 2.642686480212432,
+            "mean_ms": 1.431084645082592,
+            "min_ms": 0.7713890008744784,
+            "max_ms": 2.795190001052106,
+            "throughput_flows_per_s": 769.0107140908733
+          }
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.2849160011683125,
+            "p99_ms": 2.679787780216428,
+            "mean_ms": 1.353686514958099,
+            "min_ms": 0.7402689989248756,
+            "max_ms": 2.96612799866125,
+            "throughput_flows_per_s": 778.2609906723459
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 1.1470630015537608,
+            "p99_ms": 2.760925792172201,
+            "mean_ms": 1.2451803250041849,
+            "min_ms": 0.7755890001135413,
+            "max_ms": 3.467530998022994,
+            "throughput_flows_per_s": 871.7916963980567
+          }
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.623060999714653,
+            "p99_ms": 1.154805897349433,
+            "mean_ms": 0.6466641999031708,
+            "min_ms": 0.4909230010525789,
+            "max_ms": 1.5277580023393966,
+            "throughput_flows_per_s": 1604.9792884773337
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.607541500357911,
+            "p99_ms": 1.2436276796142909,
+            "mean_ms": 0.6699665398264187,
+            "min_ms": 0.5206219975661952,
+            "max_ms": 1.451258998713456,
+            "throughput_flows_per_s": 1645.978092707883
+          }
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.5951860021013999,
+            "p99_ms": 1.1360010104544922,
+            "mean_ms": 0.6724879149260232,
+            "min_ms": 0.49812299766927026,
+            "max_ms": 1.4808589985477738,
+            "throughput_flows_per_s": 1680.1470405374776
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.621896000666311,
+            "p99_ms": 0.8985706929161088,
+            "mean_ms": 0.6292835849308176,
+            "min_ms": 0.5135129977134056,
+            "max_ms": 1.0266350000165403,
+            "throughput_flows_per_s": 1607.9858994567924
+          }
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.5820615006086882,
+            "p99_ms": 2.14948589047708,
+            "mean_ms": 0.6642982051198487,
+            "min_ms": 0.5153829988557845,
+            "max_ms": 2.3188169980130624,
+            "throughput_flows_per_s": 1718.0315120554349
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.815253999462584,
+            "p99_ms": 1.5281486997628235,
+            "mean_ms": 0.8858320248145901,
+            "min_ms": 0.7083000018610619,
+            "max_ms": 1.7732950000208803,
+            "throughput_flows_per_s": 1226.6115844377343
+          }
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 0.623060999714653,
+        "p99_ms_across_seeds": 2.14948589047708,
+        "throughput_flows_per_s_across_seeds": 1604.9792884773337
+      },
+      "with_transfer": {
+        "median_ms_across_seeds": 0.815253999462584,
+        "p99_ms_across_seeds": 1.5281486997628235,
+        "throughput_flows_per_s_across_seeds": 1226.6115844377343
+      }
+    },
+    {
+      "device": "cuda",
+      "batch_size": 512,
+      "head": "gap",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.2693760015972657,
+            "p99_ms": 0.6313901989778967,
+            "mean_ms": 0.2976528849103488,
+            "min_ms": 0.24871699861250818,
+            "max_ms": 0.6928600014362019,
+            "throughput_flows_per_s": 1900688.9884922735
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.31124550150707364,
+            "p99_ms": 0.48572419913398324,
+            "mean_ms": 0.33015107992468984,
+            "min_ms": 0.29098599770804867,
+            "max_ms": 0.505792999319965,
+            "throughput_flows_per_s": 1645003.6948995513
+          }
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.26595100098347757,
+            "p99_ms": 0.3815227912127739,
+            "mean_ms": 0.2693896851451427,
+            "min_ms": 0.22618600269197486,
+            "max_ms": 0.41760399835766293,
+            "throughput_flows_per_s": 1925166.6589207854
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.2972255006170599,
+            "p99_ms": 0.5133781988843105,
+            "mean_ms": 0.3091165349178482,
+            "min_ms": 0.26234599863528274,
+            "max_ms": 1.0896450003201608,
+            "throughput_flows_per_s": 1722597.8219804626
+          }
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.26935099776892457,
+            "p99_ms": 0.4555279016494749,
+            "mean_ms": 0.27663510491038323,
+            "min_ms": 0.2464969984430354,
+            "max_ms": 0.5093229992780834,
+            "throughput_flows_per_s": 1900865.4292762014
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.3220710004825378,
+            "p99_ms": 0.5516597984023973,
+            "mean_ms": 0.33293645004960126,
+            "min_ms": 0.2919850012403913,
+            "max_ms": 0.5708620010409504,
+            "throughput_flows_per_s": 1589711.5829519085
+          }
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.3132404999632854,
+            "p99_ms": 0.5798579998008788,
+            "mean_ms": 0.3216826601237699,
+            "min_ms": 0.2598870014480781,
+            "max_ms": 0.656901000184007,
+            "throughput_flows_per_s": 1634526.8254265045
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.3204104996257229,
+            "p99_ms": 0.5098378982802386,
+            "mean_ms": 0.34393976982755703,
+            "min_ms": 0.29073599944240414,
+            "max_ms": 0.6583200010936707,
+            "throughput_flows_per_s": 1597950.1314659668
+          }
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.3112754984613275,
+            "p99_ms": 0.4679896977177122,
+            "mean_ms": 0.32298573009029496,
+            "min_ms": 0.28294599906075746,
+            "max_ms": 0.688129999616649,
+            "throughput_flows_per_s": 1644845.1694106283
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 0.36901999737892766,
+            "p99_ms": 0.8084578495254353,
+            "mean_ms": 0.41535161990395864,
+            "min_ms": 0.2946460008388385,
+            "max_ms": 2.640183000039542,
+            "throughput_flows_per_s": 1387458.6841814253
+          }
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 0.2693760015972657,
+        "p99_ms_across_seeds": 0.4679896977177122,
+        "throughput_flows_per_s_across_seeds": 1900688.9884922735
+      },
+      "with_transfer": {
+        "median_ms_across_seeds": 0.3204104996257229,
+        "p99_ms_across_seeds": 0.5133781988843105,
+        "throughput_flows_per_s_across_seeds": 1597950.1314659668
+      }
+    },
+    {
+      "device": "cuda",
+      "batch_size": 512,
+      "head": "gcp",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.983972000743961,
+            "p99_ms": 4.91958079990581,
+            "mean_ms": 2.19482173999495,
+            "min_ms": 1.4064899987715762,
+            "max_ms": 6.8613309995271266,
+            "throughput_flows_per_s": 258068.15812320303
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 1.9125775015709223,
+            "p99_ms": 4.264168890294967,
+            "mean_ms": 2.112206524834619,
+            "min_ms": 1.4067800002521835,
+            "max_ms": 5.664598997100256,
+            "throughput_flows_per_s": 267701.5700432854
+          }
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.980156501304009,
+            "p99_ms": 3.3303831991725015,
+            "mean_ms": 2.049595710122958,
+            "min_ms": 1.3462700007949024,
+            "max_ms": 3.4396310002193786,
+            "throughput_flows_per_s": 258565.42130019944
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 1.796294000087073,
+            "p99_ms": 3.0293465528302446,
+            "mean_ms": 1.8674842100517708,
+            "min_ms": 1.3680299998668488,
+            "max_ms": 4.0447619976475835,
+            "throughput_flows_per_s": 285031.29219113436
+          }
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.3403209995885845,
+            "p99_ms": 1.7547963904871717,
+            "mean_ms": 1.3811629000338144,
+            "min_ms": 1.2205530001665466,
+            "max_ms": 1.885942998342216,
+            "throughput_flows_per_s": 381998.04386946105
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 1.387675500154728,
+            "p99_ms": 2.33872098950087,
+            "mean_ms": 1.4724456201292924,
+            "min_ms": 1.2379020008665975,
+            "max_ms": 2.6420719987072516,
+            "throughput_flows_per_s": 368962.3402178039
+          }
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.3091859982523602,
+            "p99_ms": 2.0600352898327396,
+            "mean_ms": 1.35725985008321,
+            "min_ms": 1.1802430017269216,
+            "max_ms": 2.2846869978820905,
+            "throughput_flows_per_s": 391082.7038201384
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 1.3523960005841218,
+            "p99_ms": 1.9162600003255645,
+            "mean_ms": 1.4098463249320048,
+            "min_ms": 1.2285029988561291,
+            "max_ms": 2.143058998626657,
+            "throughput_flows_per_s": 378587.33668160724
+          }
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.672831000178121,
+            "p99_ms": 3.507650490246305,
+            "mean_ms": 1.807693555019796,
+            "min_ms": 1.3711709980270825,
+            "max_ms": 3.9102039991121273,
+            "throughput_flows_per_s": 306067.9769477508
+          },
+          "with_transfer": {
+            "n_iters": 200,
+            "median_ms": 1.4623094994021812,
+            "p99_ms": 2.914502588973845,
+            "mean_ms": 1.5727071450419317,
+            "min_ms": 1.2530709973361809,
+            "max_ms": 3.6436679984035436,
+            "throughput_flows_per_s": 350131.0770458066
+          }
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 1.672831000178121,
+        "p99_ms_across_seeds": 3.3303831991725015,
+        "throughput_flows_per_s_across_seeds": 306067.9769477508
+      },
+      "with_transfer": {
+        "median_ms_across_seeds": 1.4623094994021812,
+        "p99_ms_across_seeds": 2.914502588973845,
+        "throughput_flows_per_s_across_seeds": 350131.0770458066
+      }
+    },
+    {
+      "device": "cpu",
+      "batch_size": 1,
+      "head": "gap",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.10559849943092559,
+            "p99_ms": 0.20758039900101713,
+            "mean_ms": 0.11298341005385737,
+            "min_ms": 0.10256899986416101,
+            "max_ms": 0.21996700161253102,
+            "throughput_flows_per_s": 9469.831535382025
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.10785849917738233,
+            "p99_ms": 36.021868099160095,
+            "mean_ms": 1.0748565699032042,
+            "min_ms": 0.103979000414256,
+            "max_ms": 48.16207000112627,
+            "throughput_flows_per_s": 9271.4065894373
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.1473379998060409,
+            "p99_ms": 9.630567358581082,
+            "mean_ms": 0.7382196499929705,
+            "min_ms": 0.1268679989152588,
+            "max_ms": 20.20298099887441,
+            "throughput_flows_per_s": 6787.1153491728055
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.13111349835526198,
+            "p99_ms": 53.26833550767332,
+            "mean_ms": 2.2672675451212854,
+            "min_ms": 0.10462899808771908,
+            "max_ms": 55.03428199881455,
+            "throughput_flows_per_s": 7626.979773588407
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.10731849943113048,
+            "p99_ms": 6.043431249599934,
+            "mean_ms": 0.3549463700437627,
+            "min_ms": 0.10559899965301156,
+            "max_ms": 23.87356699910015,
+            "throughput_flows_per_s": 9318.057979758934
+          },
+          "with_transfer": null
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 0.10785849917738233,
+        "p99_ms_across_seeds": 9.630567358581082,
+        "throughput_flows_per_s_across_seeds": 9271.4065894373
+      },
+      "with_transfer": null
+    },
+    {
+      "device": "cpu",
+      "batch_size": 1,
+      "head": "gcp",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.355310001395992,
+            "p99_ms": 86.28701622226781,
+            "mean_ms": 3.869248505052383,
+            "min_ms": 0.33139500010292977,
+            "max_ms": 185.22334600129398,
+            "throughput_flows_per_s": 2814.4437141399317
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.42679899888753425,
+            "p99_ms": 59.62720286061075,
+            "mean_ms": 2.719427935044223,
+            "min_ms": 0.33470500056864694,
+            "max_ms": 86.86232600302901,
+            "throughput_flows_per_s": 2343.0233027878066
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.34664499980863184,
+            "p99_ms": 4.161935060874376,
+            "mean_ms": 0.5572982999910892,
+            "min_ms": 0.33083499874919653,
+            "max_ms": 5.145966002601199,
+            "throughput_flows_per_s": 2884.7956859382307
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.4207339989079628,
+            "p99_ms": 6.837090190929258,
+            "mean_ms": 0.6709739901816647,
+            "min_ms": 0.28901599944219925,
+            "max_ms": 11.735682001017267,
+            "throughput_flows_per_s": 2376.7986485417214
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 0.4265785009920364,
+            "p99_ms": 72.7776027770231,
+            "mean_ms": 3.1114322299254127,
+            "min_ms": 0.3371150014572777,
+            "max_ms": 98.75058599936892,
+            "throughput_flows_per_s": 2344.2344086127973
+          },
+          "with_transfer": null
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 0.4207339989079628,
+        "p99_ms_across_seeds": 59.62720286061075,
+        "throughput_flows_per_s_across_seeds": 2376.7986485417214
+      },
+      "with_transfer": null
+    },
+    {
+      "device": "cpu",
+      "batch_size": 512,
+      "head": "gap",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.761469498887891,
+            "p99_ms": 13.973800540152116,
+            "mean_ms": 2.756222434909432,
+            "min_ms": 1.1406740013626404,
+            "max_ms": 39.16268899774877,
+            "throughput_flows_per_s": 290666.4011629226
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.3510999997379258,
+            "p99_ms": 64.9622838583305,
+            "mean_ms": 4.5260009850608185,
+            "min_ms": 1.1376740003470331,
+            "max_ms": 115.10693099990021,
+            "throughput_flows_per_s": 378950.48486367636
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.55466250180325,
+            "p99_ms": 106.35633175999827,
+            "mean_ms": 8.404177829906985,
+            "min_ms": 1.0979340004269034,
+            "max_ms": 116.0003279983357,
+            "throughput_flows_per_s": 329331.92857365
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.3333860006241594,
+            "p99_ms": 74.63368803146295,
+            "mean_ms": 5.263124495086231,
+            "min_ms": 1.109693999751471,
+            "max_ms": 86.05666700168513,
+            "throughput_flows_per_s": 383984.8324193686
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 1.7331300005025696,
+            "p99_ms": 77.37490507130131,
+            "mean_ms": 9.776549935304502,
+            "min_ms": 0.9569060021021869,
+            "max_ms": 91.96876200076076,
+            "throughput_flows_per_s": 295419.2702518168
+          },
+          "with_transfer": null
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 1.55466250180325,
+        "p99_ms_across_seeds": 74.63368803146295,
+        "throughput_flows_per_s_across_seeds": 329331.92857365
+      },
+      "with_transfer": null
+    },
+    {
+      "device": "cpu",
+      "batch_size": 512,
+      "head": "gcp",
+      "per_seed": [
+        {
+          "seed": 42,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 22.68604500022775,
+            "p99_ms": 219.13483370131797,
+            "mean_ms": 48.5946915850036,
+            "min_ms": 11.036812000384089,
+            "max_ms": 299.52179699830594,
+            "throughput_flows_per_s": 22568.940509236403
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 123,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 16.524177999599488,
+            "p99_ms": 218.63777316197226,
+            "mean_ms": 43.91806311004984,
+            "min_ms": 10.019887002272299,
+            "max_ms": 231.4933439993183,
+            "throughput_flows_per_s": 30984.89982451229
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 456,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 13.023012999838102,
+            "p99_ms": 28.37577051184777,
+            "mean_ms": 14.267171375013277,
+            "min_ms": 10.416451001219684,
+            "max_ms": 48.18897999939509,
+            "throughput_flows_per_s": 39315.01872925759
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 789,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 13.988605000122334,
+            "p99_ms": 154.26806755160095,
+            "mean_ms": 19.08338385494062,
+            "min_ms": 10.208714000327745,
+            "max_ms": 287.44219199870713,
+            "throughput_flows_per_s": 36601.21934928625
+          },
+          "with_transfer": null
+        },
+        {
+          "seed": 1337,
+          "compute_only": {
+            "n_iters": 200,
+            "median_ms": 22.245746000407962,
+            "p99_ms": 170.221085677258,
+            "mean_ms": 41.42155524017653,
+            "min_ms": 9.487594001257094,
+            "max_ms": 186.6634959988005,
+            "throughput_flows_per_s": 23015.636337419768
+          },
+          "with_transfer": null
+        }
+      ],
+      "compute_only": {
+        "median_ms_across_seeds": 16.524177999599488,
+        "p99_ms_across_seeds": 170.221085677258,
+        "throughput_flows_per_s_across_seeds": 30984.89982451229
+      },
+      "with_transfer": null
+    }
+  ],
+  "comparison": [
+    {
+      "device": "cpu",
+      "batch_size": 1,
+      "gap_median_ms": 0.10785849917738233,
+      "gcp_median_ms": 0.4207339989079628,
+      "delta_ms_gcp_minus_gap": 0.3128754997305805,
+      "ratio_gcp_over_gap": 3.900795969875592,
+      "gap_throughput_flows_per_s": 9271.4065894373,
+      "gcp_throughput_flows_per_s": 2376.7986485417214
+    },
+    {
+      "device": "cpu",
+      "batch_size": 512,
+      "gap_median_ms": 1.55466250180325,
+      "gcp_median_ms": 16.524177999599488,
+      "delta_ms_gcp_minus_gap": 14.969515497796237,
+      "ratio_gcp_over_gap": 10.628787907621831,
+      "gap_throughput_flows_per_s": 329331.92857365,
+      "gcp_throughput_flows_per_s": 30984.89982451229
+    },
+    {
+      "device": "cuda",
+      "batch_size": 1,
+      "gap_median_ms": 0.2485410004737787,
+      "gcp_median_ms": 0.623060999714653,
+      "delta_ms_gcp_minus_gap": 0.3745199992408743,
+      "ratio_gcp_over_gap": 2.506874111422057,
+      "gap_throughput_flows_per_s": 4023.4810276524213,
+      "gcp_throughput_flows_per_s": 1604.9792884773337
+    },
+    {
+      "device": "cuda",
+      "batch_size": 512,
+      "gap_median_ms": 0.2693760015972657,
+      "gcp_median_ms": 1.672831000178121,
+      "delta_ms_gcp_minus_gap": 1.4034549985808553,
+      "ratio_gcp_over_gap": 6.2100223860294355,
+      "gap_throughput_flows_per_s": 1900688.9884922735,
+      "gcp_throughput_flows_per_s": 306067.9769477508
+    }
+  ],
+  "_caveats": {
+    "forward_pass_only": "Timed region covers the classifier forward pass ONLY. Flow export, NetFlow record assembly, 39-feature extraction and z-score standardisation are excluded and dominate in a real sensor. Every latency here is a LOWER BOUND on per-flow cost.",
+    "batch1_gpu_is_a_launch_floor": "At batch=1 on GPU the measurement is dominated by kernel-launch and synchronisation overhead, not arithmetic. GAP and GCP looking equal there understates GCP's cost; it does not show the cost is zero. Quote the CPU batch=1 cell for a per-flow claim.",
+    "cost_gap_is_quadratic_in_C": "GCP is O(C^2 L') covariance plus three Newton-Schulz CxC matmul pairs plus a C(C+1)/2-input classifier, against GAP's O(C L') and a C-input classifier. These numbers are measured at C=32 and license NO claim about wider backbones.",
+    "flows_per_second_is_not_packets_per_second": "Line rate is a packets-per-second property of a link. This model consumes flow records, so throughput is comparable only to a flow-export rate; converting it to a link speed needs a packets-per-flow assumption the paper does not have.",
+    "see_module_docstring_for_the_other_four": "desktop hardware is not an edge device; PyTorch eager mode is a framework floor a TensorRT deployment would not pay; cudnn.benchmark is pinned to the training default False; warmup removes cold kernels but not sustained thermal throttling."
+  },
+  "_deployment_point": {
+    "cell": {
+      "device": "cpu",
+      "batch_size": 1,
+      "measurement": "compute_only"
+    },
+    "recommendation": "Quote the CPU batch=1 cell as the per-flow cost of the pooling head, and the CPU batch=512 cell as the batch-scoring cost.",
+    "reasoning": "An edge IDS may have no accelerator, so CPU is the conservative deployment assumption. batch=1 is the line-rate case: a detector scores a flow when the flow record closes, it does not wait for 512 of them. On CPU there is no host-to-device copy, so this cell has no transfer-accounting ambiguity, unlike every CUDA cell. The GPU cells are reported for completeness but at batch=1 they measure kernel-launch overhead rather than the pooling operator.",
+    "do_not_quote_alone": "The GPU batch=1 cell. It is a launch-overhead floor and will show GAP and GCP as near-identical for reasons that have nothing to do with pooling."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/maxpool/NF-ToN-IoT-v2__gmp_wide__binary__seed789.pt",
+  "dataset": "NF-ToN-IoT-v2",
+  "head": "gmp_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.9430917937534617,
+  "balanced_accuracy": 0.935373667258266,
+  "auc": 0.9827233637897412,
+  "per_family_f1": {
+    "0": 0.8948183091324537,
+    "1": 0.9913652783744697
+  },
+  "confusion_matrix": [
+    [
+      6070,
+      845
+    ],
+    [
+      582,
+      81918
+    ]
+  ],
+  "n_test": 89415
+}

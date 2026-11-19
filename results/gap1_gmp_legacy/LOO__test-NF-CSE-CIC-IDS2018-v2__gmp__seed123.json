@@ -1,0 +1,29 @@
+{
+  "train": [
+    "NF-UNSW-NB15-v2",
+    "NF-ToN-IoT-v2",
+    "NF-BoT-IoT-v2"
+  ],
+  "test": "NF-CSE-CIC-IDS2018-v2",
+  "head": "gmp",
+  "seed": 123,
+  "macro_f1": 0.5426975850417055,
+  "balanced_accuracy": 0.5562557269342587,
+  "auc": 0.49548522106749177,
+  "f1_uncalibrated": 0.5426975850417055,
+  "f1_calibrated": 0.6322694052228512,
+  "train_macro_f1": 0.9806544156473906,
+  "train_test_delta": 0.43795683060568513,
+  "threshold": 0.9845682382583618,
+  "best_val_macro_f1": 0.9805951424037205,
+  "n_train": 5100000,
+  "n_val": 900000,
+  "n_test_eval": 1900000,
+  "dedup": false,
+  "n_test_raw": 2000000,
+  "n_test_dupes_dropped": 0,
+  "test_dupe_frac": 0.0,
+  "n_val_dupes_dropped": 0,
+  "val_dupe_frac": 0.0,
+  "val_split_degenerate": false
+}

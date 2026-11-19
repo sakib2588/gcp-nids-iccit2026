@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/gateC/NF-CSE-CIC-IDS2018-v2__gap__binary__seed456.pt",
+  "dataset": "NF-CSE-CIC-IDS2018-v2",
+  "head": "gap",
+  "label_mode": "binary",
+  "macro_f1": 0.8777779631857049,
+  "balanced_accuracy": 0.8996985339949688,
+  "auc": 0.9203941267926863,
+  "per_family_f1": {
+    "0": 0.8659516771309212,
+    "1": 0.8896042492404885
+  },
+  "confusion_matrix": [
+    [
+      35446,
+      130
+    ],
+    [
+      10844,
+      44216
+    ]
+  ],
+  "n_test": 90636
+}

@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/feature_perm/NF-UNSW-NB15-v2__gap__binary__seed123__perm1.pt",
+  "dataset": "NF-UNSW-NB15-v2",
+  "head": "gap",
+  "label_mode": "binary",
+  "macro_f1": 0.9396512119753326,
+  "balanced_accuracy": 0.9575634525020185,
+  "auc": 0.988675131234273,
+  "per_family_f1": {
+    "0": 0.9713890460919323,
+    "1": 0.907913377858733
+  },
+  "confusion_matrix": [
+    [
+      15448,
+      722
+    ],
+    [
+      188,
+      4486
+    ]
+  ],
+  "n_test": 20844
+}

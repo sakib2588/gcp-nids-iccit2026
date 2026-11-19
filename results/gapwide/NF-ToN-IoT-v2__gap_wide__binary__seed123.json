@@ -1,0 +1,24 @@
+{
+  "checkpoint": "checkpoints/gapwide/NF-ToN-IoT-v2__gap_wide__binary__seed123.pt",
+  "dataset": "NF-ToN-IoT-v2",
+  "head": "gap_wide",
+  "label_mode": "binary",
+  "macro_f1": 0.9322100771333954,
+  "balanced_accuracy": 0.9299483205153487,
+  "auc": 0.9789159306733274,
+  "per_family_f1": {
+    "0": 0.8748454657843066,
+    "1": 0.9895746884824842
+  },
+  "confusion_matrix": [
+    [
+      6015,
+      900
+    ],
+    [
+      821,
+      81679
+    ]
+  ],
+  "n_test": 89415
+}

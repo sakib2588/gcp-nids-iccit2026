@@ -1,0 +1,463 @@
+{
+  "N40000": {
+    "per_strength": {
+      "0.0": {
+        "regime_difference_t_ci": [
+          -0.0002990889142453601,
+          -0.00925994764982678,
+          0.008661769821336061
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": -0.00063298058349881,
+        "mean_delta_mean": -0.0003338916692534499
+      },
+      "0.25": {
+        "regime_difference_t_ci": [
+          0.016474509912625578,
+          0.004664539138898378,
+          0.028284480686352777
+        ],
+        "excludes_zero": true,
+        "cov_delta_mean": 0.004609352852900495,
+        "mean_delta_mean": -0.011865157059725084
+      },
+      "0.5": {
+        "regime_difference_t_ci": [
+          0.019147664618603132,
+          0.008758374584546173,
+          0.02953695465266009
+        ],
+        "excludes_zero": true,
+        "cov_delta_mean": 0.015173559275851133,
+        "mean_delta_mean": -0.003974105342751999
+      },
+      "0.75": {
+        "regime_difference_t_ci": [
+          0.010889522779061212,
+          -0.005831927918685054,
+          0.02761097347680748
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": 0.007328749407788715,
+        "mean_delta_mean": -0.0035607733712724964
+      },
+      "1.0": {
+        "regime_difference_t_ci": [
+          0.0087246241381836,
+          -0.005323224782265925,
+          0.022772473058633128
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": 0.010914884424604199,
+        "mean_delta_mean": 0.0021902602864205976
+      },
+      "_read_this_first": "The pooled contrast below is NOT uniform across strengths. At s=0.75, s=1.0 the regime difference COVERS ZERO -- and those are the strengths the mechanism predicts should be strongest. Do not quote the pooled figure without this."
+    },
+    "pooled_contrast": {
+      "paired_t_ci": [
+        0.013809080362118382,
+        0.008895491629692522,
+        0.01872266909454424
+      ],
+      "paired_excludes_zero": true,
+      "paired_dz": 3.489554960266246,
+      "unpaired_welch_ci": [
+        0.013809080362118382,
+        0.00953623987963557,
+        0.018081920844601196
+      ],
+      "unpaired_welch_df": 7.411507067758833,
+      "unpaired_excludes_zero": true,
+      "exact_signflip_p": 0.0625,
+      "signflip_arrangements": 32,
+      "exact_label_perm_p": 0.007936507936507936,
+      "label_arrangements": 252,
+      "per_seed_difference": [
+        0.00903880126720688,
+        0.015391346974532538,
+        0.01836169823603437,
+        0.015930625942255666,
+        0.010322929390562452
+      ],
+      "cov_pooled_t_ci": [
+        0.009506636490286135,
+        0.0064662845921070085,
+        0.012546988388465262
+      ],
+      "mean_pooled_t_ci": [
+        -0.004302443871832246,
+        -0.008364108436349205,
+        -0.00024077930731528606
+      ]
+    },
+    "leave_one_seed_out": {
+      "drop_42": {
+        "t_ci": [
+          0.015001650135846256,
+          0.009629438612698311,
+          0.0203738616589942
+        ],
+        "excludes_zero": true
+      },
+      "drop_123": {
+        "t_ci": [
+          0.013413513709014842,
+          0.006326452508071223,
+          0.02050057490995846
+        ],
+        "excludes_zero": true
+      },
+      "drop_456": {
+        "t_ci": [
+          0.012670925893639384,
+          0.007103027717256998,
+          0.01823882407002177
+        ],
+        "excludes_zero": true
+      },
+      "drop_789": {
+        "t_ci": [
+          0.01327869396708406,
+          0.0063418935880696714,
+          0.02021549434609845
+        ],
+        "excludes_zero": true
+      },
+      "drop_1337": {
+        "t_ci": [
+          0.014680618105007363,
+          0.008352422568602805,
+          0.02100881364141192
+        ],
+        "excludes_zero": true
+      }
+    },
+    "specification_robustness": {
+      "nonzero_all4": {
+        "t_ci": [
+          0.013809080362118382,
+          0.008895491629692522,
+          0.01872266909454424
+        ],
+        "excludes_zero": true,
+        "strengths": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "drop_s0.5": {
+        "t_ci": [
+          0.012029552276623464,
+          0.005326101192983912,
+          0.01873300336026302
+        ],
+        "excludes_zero": true,
+        "strengths": [
+          0.25,
+          0.75,
+          1.0
+        ]
+      },
+      "drop_s0.25": {
+        "t_ci": [
+          0.012920603845282649,
+          0.003993488235980279,
+          0.021847719454585017
+        ],
+        "excludes_zero": true,
+        "strengths": [
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "include_s0": {
+        "t_ci": [
+          0.010987446506845635,
+          0.005306617812508048,
+          0.01666827520118322
+        ],
+        "excludes_zero": true,
+        "strengths": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "top2_only": {
+        "t_ci": [
+          0.009807073458622407,
+          -0.003606396438631093,
+          0.02322054335587591
+        ],
+        "excludes_zero": false,
+        "strengths": [
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "separability_slopes": {
+      "cov": {
+        "slope_delta_on_gap_f1": 0.06071273094815221,
+        "se": 0.025004094010776096,
+        "n": 25
+      },
+      "mean": {
+        "slope_delta_on_gap_f1": 0.01929304801861773,
+        "se": 0.02087592055626948,
+        "n": 25
+      }
+    }
+  },
+  "N4000": {
+    "per_strength": {
+      "0.0": {
+        "regime_difference_t_ci": [
+          0.008478401631517418,
+          -0.036611215020664584,
+          0.05356801828369942
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": 0.011974804117062443,
+        "mean_delta_mean": 0.0034964024855450248
+      },
+      "0.25": {
+        "regime_difference_t_ci": [
+          0.002843817150266581,
+          -0.023886211252428142,
+          0.029573845552961307
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": 0.0070409576772701545,
+        "mean_delta_mean": 0.004197140527003573
+      },
+      "0.5": {
+        "regime_difference_t_ci": [
+          0.014518963998672607,
+          -0.01899128841491783,
+          0.04802921641226304
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": 0.0022447710089467552,
+        "mean_delta_mean": -0.012274192989725851
+      },
+      "0.75": {
+        "regime_difference_t_ci": [
+          -0.0014822710449271526,
+          -0.06296073977432823,
+          0.059996197684473916
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": -0.007706534665478548,
+        "mean_delta_mean": -0.006224263620551396
+      },
+      "1.0": {
+        "regime_difference_t_ci": [
+          0.008584251995527125,
+          -0.025887874884178756,
+          0.04305637887523301
+        ],
+        "excludes_zero": false,
+        "cov_delta_mean": 0.012313373161467767,
+        "mean_delta_mean": 0.0037291211659406407
+      },
+      "_read_this_first": "The pooled contrast below is NOT uniform across strengths. At s=0.25, s=0.5, s=0.75, s=1.0 the regime difference COVERS ZERO -- and those are the strengths the mechanism predicts should be strongest. Do not quote the pooled figure without this."
+    },
+    "pooled_contrast": {
+      "paired_t_ci": [
+        0.006116190524884791,
+        -0.020654246079984763,
+        0.03288662712975435
+      ],
+      "paired_excludes_zero": false,
+      "paired_dz": 0.28368060233739445,
+      "unpaired_welch_ci": [
+        0.006116190524884791,
+        -0.013937190096607583,
+        0.026169571146377163
+      ],
+      "unpaired_welch_df": 7.008065486861877,
+      "unpaired_excludes_zero": false,
+      "exact_signflip_p": 0.5625,
+      "signflip_arrangements": 32,
+      "exact_label_perm_p": 0.47619047619047616,
+      "label_arrangements": 252,
+      "per_seed_difference": [
+        -0.022512632891398432,
+        0.0008512371703601751,
+        0.005847720923033178,
+        0.037833328516945514,
+        0.008561298905483516
+      ],
+      "cov_pooled_t_ci": [
+        0.003473141795551532,
+        -0.009679603919103053,
+        0.016625887510206116
+      ],
+      "mean_pooled_t_ci": [
+        -0.002643048729333258,
+        -0.02217946374701989,
+        0.016893366288353372
+      ]
+    },
+    "leave_one_seed_out": {
+      "drop_42": {
+        "t_ci": [
+          0.013273396378955596,
+          -0.013271029801360763,
+          0.03981782255927195
+        ],
+        "excludes_zero": false
+      },
+      "drop_123": {
+        "t_ci": [
+          0.007432428863515944,
+          -0.03181100838301168,
+          0.04667586611004357
+        ],
+        "excludes_zero": false
+      },
+      "drop_456": {
+        "t_ci": [
+          0.006183307925347693,
+          -0.033430017404971896,
+          0.04579663325566728
+        ],
+        "excludes_zero": false
+      },
+      "drop_789": {
+        "t_ci": [
+          -0.0018130939731303905,
+          -0.024351721622268802,
+          0.02072553367600802
+        ],
+        "excludes_zero": false
+      },
+      "drop_1337": {
+        "t_ci": [
+          0.005504913429735109,
+          -0.03402968192878147,
+          0.045039508788251685
+        ],
+        "excludes_zero": false
+      }
+    },
+    "specification_robustness": {
+      "nonzero_all4": {
+        "t_ci": [
+          0.006116190524884791,
+          -0.020654246079984763,
+          0.03288662712975435
+        ],
+        "excludes_zero": false,
+        "strengths": [
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "drop_s0.5": {
+        "t_ci": [
+          0.0033152660336221865,
+          -0.024671975165743674,
+          0.031302507232988046
+        ],
+        "excludes_zero": false,
+        "strengths": [
+          0.25,
+          0.75,
+          1.0
+        ]
+      },
+      "drop_s0.25": {
+        "t_ci": [
+          0.007206981649757527,
+          -0.025557356473555684,
+          0.03997131977307074
+        ],
+        "excludes_zero": false,
+        "strengths": [
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "include_s0": {
+        "t_ci": [
+          0.006588632746211316,
+          -0.02225339707537424,
+          0.035430662567796874
+        ],
+        "excludes_zero": false,
+        "strengths": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "top2_only": {
+        "t_ci": [
+          0.0035509904752999864,
+          -0.03562484075904776,
+          0.04272682170964773
+        ],
+        "excludes_zero": false,
+        "strengths": [
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "separability_slopes": {
+      "cov": {
+        "slope_delta_on_gap_f1": -0.11017358943605025,
+        "se": 0.10852575200885772,
+        "n": 25
+      },
+      "mean": {
+        "slope_delta_on_gap_f1": -0.05142362713083863,
+        "se": 0.07832299174214524,
+        "n": 25
+      }
+    }
+  },
+  "N40000_vs_N4000": {
+    "welch_ci": [
+      0.007692889837233591,
+      -0.018861058701974895,
+      0.03424683837644208
+    ],
+    "df": 4.269205585020927,
+    "excludes_zero": false,
+    "_reading": "If this covers zero the two sample sizes are NOT distinguishable, and the N=4,000 arm is absence of evidence rather than evidence of absence."
+  },
+  "_headline": {
+    "quote": "N40000.pooled_contrast.unpaired_welch_ci + exact_label_perm_p",
+    "why": "Pairing costs df 7.4->4 for a ~3 percent SE gain (across-regime seed correlation ~+0.065), so the paired interval is wider, and the paired sign-flip is pinned at the n=5 floor of 2/32=0.0625.",
+    "mandatory_companion": "per_strength (two endpoints cover zero)",
+    "not_recommended": {
+      "paired_signflip_p": "cannot reach 0.05 at n=5 by construction",
+      "rank_correlation_per_regime": "the two rho intervals overlap; their bootstrapped difference crosses zero"
+    },
+    "caveat_label_permutation": "tests a stronger null than the sign-flip: it assumes a seed's cov and mean values are exchangeable across the group boundary",
+    "_superseded_note": "The design is PAIRED. Quote paired_t_ci and the paired sign-flip test, not unpaired_welch_ci or exact_label_perm_p. The manuscript quotes the paired figure."
+  },
+  "_method": {
+    "interval": "Student-t df=n-1; Welch for the unpaired contrast",
+    "permutations": "fully enumerated, exact: 2^5=32 paired, C(10,5)=252 unpaired",
+    "delta": "GCP minus GAP test macro-F1 at matched (regime, strength, seed)",
+    "pooling": "per seed, mean over the four non-zero strengths",
+    "source_cells": {
+      "N40000": "results/gateB_synthetic_n40k",
+      "N4000": "results/gateB_synthetic_v2"
+    }
+  }
+}

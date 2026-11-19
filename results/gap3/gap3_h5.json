@@ -1,0 +1,8 @@
+{
+  "top_pair_cov_gcp": 0.33845785036683085,
+  "random_pair_cov_gcp": 0.13799990098923445,
+  "top_pair_cov_gap_featuremap": 0.7466990924440324,
+  "n_pairs": 10,
+  "attribution": "gradient-x-activation channel attribution (Grad-CAM style) in GCP-layer channel space; NOT input-feature SHAP",
+  "note": "H5 PROVISIONAL: label-shuffled-train control is a deferred GPU run; mechanism claim not final until it completes."
+}
