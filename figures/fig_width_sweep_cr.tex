@@ -1,0 +1,55 @@
+% ICCIT Fig. 2: channel-width sweep. Drawn at the true column width (252 pt = 8.89 cm)
+% so every label prints at its nominal size, in the paper's own Times text face.
+% Data: width_sweep.dat, written by scripts/make_iccit_fig_width_data.py.
+% Build: pdflatex fig_width_sweep_cr.tex  (run in this folder), copy the PDF up one level.
+\documentclass[border=1pt]{standalone}
+\usepackage{times}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\definecolor{gcpgreen}{HTML}{228833}
+\definecolor{gcpfill}{HTML}{DCEEDF}
+\definecolor{slate}{HTML}{5B6770}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=8.55cm, height=3.3cm,
+  xmode=log, log basis x=2,
+  xmin=14, xmax=146, ymin=-0.0046, ymax=0.0118,
+  xtick={16,24,32,48,64,96,128},
+  xticklabels={16,24,32,48,64,96,128},
+  minor x tick num=0,
+  scaled y ticks=false, ytick={0,0.004,0.008},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=3,
+                    /pgf/number format/fixed zerofill},
+  tick label style={font=\scriptsize},
+  label style={font=\footnotesize},
+  xlabel={Final-layer channels $C$},
+  ylabel={GCP$\,-\,$GAP\\macro-F1}, ylabel style={align=center},
+  axis line style={slate, line width=0.5pt},
+  tick style={slate, line width=0.5pt},
+  major tick length=2pt,
+  ymajorgrids, grid style={gray!25, line width=0.3pt},
+  axis on top=false,
+  clip=true,
+]
+% region where the covariance is ill-conditioned (C > L' = 33)
+\addplot[draw=none, fill=gcpfill, forget plot] coordinates
+  {(33,-0.0046) (33,0.0118) (146,0.0118) (146,-0.0046)} \closedcycle;
+\draw[slate, line width=0.6pt] (axis cs:14,0) -- (axis cs:146,0);
+\draw[slate, dashed, line width=0.6pt] (axis cs:33,-0.0046) -- (axis cs:33,0.0118);
+\node[anchor=north west, font=\scriptsize, text=slate, inner sep=2pt]
+  at (axis cs:33,0.0118) {$L'{=}33$};
+\node[anchor=south east, font=\scriptsize, text=slate, inner sep=2pt, align=right]
+  at (axis cs:146,-0.0046) {ill-conditioned: $C>L'$};
+\node[anchor=north east, font=\scriptsize, text=slate, inner sep=2pt]
+  at (axis cs:146,0.0118) {NF-UNSW-NB15-v2, $n{=}5$};
+\addplot[gcpgreen, line width=0.9pt, mark=*, mark size=1.9pt,
+         mark options={fill=white, line width=0.8pt},
+         error bars/.cd, y dir=both, y explicit,
+         error bar style={line width=0.7pt}, error mark options={rotate=90, mark size=2pt, line width=0.7pt}]
+  table[x=C, y=mean, y error=err] {width_sweep.dat};
+\end{axis}
+\end{tikzpicture}
+\end{document}

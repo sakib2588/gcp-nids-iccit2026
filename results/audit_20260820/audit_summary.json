@@ -1,0 +1,510 @@
+{
+  "_description": "Audit recomputation of 2026-08-20. Student-t df=4 intervals for the cross-dataset arm including the max-pooling head, the in-distribution GCP-minus-SE contrasts, minimum detectable effects, and the single-family-drop coupling correlation. Recomputed from per-seed cell files, not copied from any summary.",
+  "_estimator": "Student-t, n-1 = 4 degrees of freedom",
+  "_generated_by": "scripts/audit_recompute_20260820.py",
+  "_reads_only": true,
+  "cross_dataset_loo": {
+    "NF-UNSW-NB15-v2": {
+      "per_head_mean": {
+        "gap": {
+          "macro_f1": 0.5387426874064355,
+          "auc": 0.5714288078667082
+        },
+        "gcp": {
+          "macro_f1": 0.511863268140029,
+          "auc": 0.48970595394409244
+        },
+        "se": {
+          "macro_f1": 0.5259220192350182,
+          "auc": 0.4369841330963965
+        },
+        "gmp": {
+          "macro_f1": 0.4721531814375621,
+          "auc": 0.4186481116499998
+        }
+      },
+      "contrasts": {
+        "gcp - gmp / macro_f1": {
+          "mean": 0.03971008670246694,
+          "t_ci": [
+            -0.08168000251465468,
+            0.16110017591958856
+          ],
+          "excludes_zero": false,
+          "d_z": 0.4061829539956282,
+          "sd": 0.09776404034644531,
+          "n": 5
+        },
+        "gcp - gmp / auc": {
+          "mean": 0.07105784229409262,
+          "t_ci": [
+            -0.1817510825278773,
+            0.32386676711606255
+          ],
+          "excludes_zero": false,
+          "d_z": 0.3489986147789204,
+          "sd": 0.20360494077922206,
+          "n": 5
+        },
+        "gmp - gap / macro_f1": {
+          "mean": -0.06658950596887343,
+          "t_ci": [
+            -0.16740301170499344,
+            0.03422399976724658
+          ],
+          "excludes_zero": false,
+          "d_z": -0.8201459875440209,
+          "sd": 0.08119225964670013,
+          "n": 5
+        },
+        "gmp - gap / auc": {
+          "mean": -0.15278069621670837,
+          "t_ci": [
+            -0.245295705328689,
+            -0.06026568710472774
+          ],
+          "excludes_zero": true,
+          "d_z": -2.0505028528200926,
+          "sd": 0.07450889229760708,
+          "n": 5
+        },
+        "gcp - gap / macro_f1": {
+          "mean": -0.02687941926640649,
+          "t_ci": [
+            -0.13551938565025862,
+            0.08176054711744563
+          ],
+          "excludes_zero": false,
+          "d_z": -0.30720929236850736,
+          "sd": 0.08749546297630792,
+          "n": 5
+        },
+        "gcp - gap / auc": {
+          "mean": -0.08172285392261576,
+          "t_ci": [
+            -0.3210051049517051,
+            0.1575593971064736
+          ],
+          "excludes_zero": false,
+          "d_z": -0.42406958773486936,
+          "sd": 0.19271095189619997,
+          "n": 5
+        }
+      }
+    },
+    "NF-CSE-CIC-IDS2018-v2": {
+      "per_head_mean": {
+        "gap": {
+          "macro_f1": 0.529400326166006,
+          "auc": 0.5176888833187563
+        },
+        "gcp": {
+          "macro_f1": 0.5254875056470573,
+          "auc": 0.6309190661062244
+        },
+        "se": {
+          "macro_f1": 0.5348712302432964,
+          "auc": 0.5949907604973343
+        },
+        "gmp": {
+          "macro_f1": 0.5324922601063433,
+          "auc": 0.5339109890751764
+        }
+      },
+      "contrasts": {
+        "gcp - gmp / macro_f1": {
+          "mean": -0.007004754459286011,
+          "t_ci": [
+            -0.03253421809419983,
+            0.01852470917562781
+          ],
+          "excludes_zero": false,
+          "d_z": -0.3406868061441782,
+          "sd": 0.020560686040543667,
+          "n": 5
+        },
+        "gcp - gmp / auc": {
+          "mean": 0.097008077031048,
+          "t_ci": [
+            -0.028766512441334546,
+            0.22278266650343054
+          ],
+          "excludes_zero": false,
+          "d_z": 0.9576770418390325,
+          "sd": 0.10129518908040529,
+          "n": 5
+        },
+        "gmp - gap / macro_f1": {
+          "mean": 0.003091933940337388,
+          "t_ci": [
+            -0.04518536978558687,
+            0.05136923766626165
+          ],
+          "excludes_zero": false,
+          "d_z": 0.07952273143372916,
+          "sd": 0.038881133539962386,
+          "n": 5
+        },
+        "gmp - gap / auc": {
+          "mean": 0.01622210575642007,
+          "t_ci": [
+            -0.07470610184993803,
+            0.10715031336277817
+          ],
+          "excludes_zero": false,
+          "d_z": 0.22151986960966374,
+          "sd": 0.0732309286070128,
+          "n": 5
+        },
+        "gcp - gap / macro_f1": {
+          "mean": -0.003912820518948623,
+          "t_ci": [
+            -0.04799745318177973,
+            0.040171812143882484
+          ],
+          "excludes_zero": false,
+          "d_z": -0.11020639339267384,
+          "sd": 0.035504478447152724,
+          "n": 5
+        },
+        "gcp - gap / auc": {
+          "mean": 0.11323018278746806,
+          "t_ci": [
+            -0.06239181730527822,
+            0.28885218288021436
+          ],
+          "excludes_zero": false,
+          "d_z": 0.8005480031145474,
+          "sd": 0.14144084095762385,
+          "n": 5
+        }
+      }
+    },
+    "NF-ToN-IoT-v2": {
+      "per_head_mean": {
+        "gap": {
+          "macro_f1": 0.5598299638587885,
+          "auc": 0.5215365855184672
+        },
+        "gcp": {
+          "macro_f1": 0.5567953814869221,
+          "auc": 0.4750673749260276
+        },
+        "se": {
+          "macro_f1": 0.5550572017615863,
+          "auc": 0.48896187265478785
+        },
+        "gmp": {
+          "macro_f1": 0.46247551146192056,
+          "auc": 0.59185134292714
+        }
+      },
+      "contrasts": {
+        "gcp - gmp / macro_f1": {
+          "mean": 0.09431987002500146,
+          "t_ci": [
+            0.08091598749815024,
+            0.10772375255185268
+          ],
+          "excludes_zero": true,
+          "d_z": 8.737288370790777,
+          "sd": 0.010795096375703684,
+          "n": 5
+        },
+        "gcp - gmp / auc": {
+          "mean": -0.11678396800111246,
+          "t_ci": [
+            -0.15194594415888243,
+            -0.08162199184334248
+          ],
+          "excludes_zero": true,
+          "d_z": -4.123956173103739,
+          "sd": 0.02831843091902197,
+          "n": 5
+        },
+        "gmp - gap / macro_f1": {
+          "mean": -0.09735445239686791,
+          "t_ci": [
+            -0.11392138798775092,
+            -0.0807875168059849
+          ],
+          "excludes_zero": true,
+          "d_z": -7.296552699375243,
+          "sd": 0.013342527136849672,
+          "n": 5
+        },
+        "gmp - gap / auc": {
+          "mean": 0.07031475740867284,
+          "t_ci": [
+            0.0017766773266071761,
+            0.1388528374907385
+          ],
+          "excludes_zero": true,
+          "d_z": 1.2738510140967068,
+          "sd": 0.05519857238448983,
+          "n": 5
+        },
+        "gcp - gap / macro_f1": {
+          "mean": -0.0030345823718664457,
+          "t_ci": [
+            -0.021740562186403717,
+            0.015671397442670827
+          ],
+          "excludes_zero": false,
+          "d_z": -0.20142926048718005,
+          "sd": 0.01506525101927573,
+          "n": 5
+        },
+        "gcp - gap / auc": {
+          "mean": -0.04646921059243962,
+          "t_ci": [
+            -0.11457393299196618,
+            0.021635511807086935
+          ],
+          "excludes_zero": false,
+          "d_z": -0.8472121137077347,
+          "sd": 0.05484955873573621,
+          "n": 5
+        }
+      }
+    },
+    "NF-BoT-IoT-v2": {
+      "per_head_mean": {
+        "gap": {
+          "macro_f1": 0.062031104919754734,
+          "auc": 0.4885153072038526
+        },
+        "gcp": {
+          "macro_f1": 0.13563549750583623,
+          "auc": 0.6386204310141136
+        },
+        "se": {
+          "macro_f1": 0.06529714976544317,
+          "auc": 0.44279190160197474
+        },
+        "gmp": {
+          "macro_f1": 0.16339183681316993,
+          "auc": 0.7547251135707768
+        }
+      },
+      "contrasts": {
+        "gcp - gmp / macro_f1": {
+          "mean": -0.02775633930733371,
+          "t_ci": [
+            -0.14494543075434482,
+            0.0894327521396774
+          ],
+          "excludes_zero": false,
+          "d_z": -0.2940892092795838,
+          "sd": 0.09438067916645795,
+          "n": 5
+        },
+        "gcp - gmp / auc": {
+          "mean": -0.11610468255666324,
+          "t_ci": [
+            -0.19865754141995629,
+            -0.03355182369337019
+          ],
+          "excludes_zero": true,
+          "d_z": -1.7463114704751592,
+          "sd": 0.06648566680093555,
+          "n": 5
+        },
+        "gmp - gap / macro_f1": {
+          "mean": 0.10136073189341521,
+          "t_ci": [
+            -0.05442690163923741,
+            0.25714836542606784
+          ],
+          "excludes_zero": false,
+          "d_z": 0.807868819685607,
+          "sd": 0.12546682013654284,
+          "n": 5
+        },
+        "gmp - gap / auc": {
+          "mean": 0.26620980636692415,
+          "t_ci": [
+            0.09779100848704775,
+            0.43462860424680055
+          ],
+          "excludes_zero": true,
+          "d_z": 1.962626124254629,
+          "sd": 0.13563959180866705,
+          "n": 5
+        },
+        "gcp - gap / macro_f1": {
+          "mean": 0.0736043925860815,
+          "t_ci": [
+            -0.04547101013723577,
+            0.19267979530939877
+          ],
+          "excludes_zero": false,
+          "d_z": 0.7675130404232285,
+          "sd": 0.09589985929814812,
+          "n": 5
+        },
+        "gcp - gap / auc": {
+          "mean": 0.15010512381026092,
+          "t_ci": [
+            0.008218109733478196,
+            0.29199213788704365
+          ],
+          "excludes_zero": true,
+          "d_z": 1.3135812984284778,
+          "sd": 0.11427166631394751,
+          "n": 5
+        }
+      }
+    }
+  },
+  "in_distribution_gcp_minus_se": {
+    "NF-UNSW-NB15-v2": {
+      "unavailable": "NF-UNSW-NB15-v2__gcp__binary__seed42.json"
+    },
+    "NF-CSE-CIC-IDS2018-v2": {
+      "mean": -8.05667223441997e-05,
+      "t_ci": [
+        -0.00043409934746578674,
+        0.0002729659027773873
+      ],
+      "excludes_zero": false,
+      "d_z": -0.28296341406586467,
+      "sd": 0.00028472487374444245,
+      "n": 5
+    },
+    "NF-ToN-IoT-v2": {
+      "mean": 0.007785566638576391,
+      "t_ci": [
+        0.006062051086703239,
+        0.009509082190449544
+      ],
+      "excludes_zero": true,
+      "d_z": 5.608918231245587,
+      "sd": 0.0013880691993699166,
+      "n": 5
+    },
+    "NF-BoT-IoT-v2": {
+      "unavailable": "NF-BoT-IoT-v2__gcp__binary__seed42.json"
+    }
+  },
+  "minimum_detectable_effect": {
+    "_definition": "Smallest paired macro-F1 difference detectable at alpha .05 two-sided and 80 percent power, given the observed per-seed spread at n=5. (t_.975,4 + t_.80,4) * sd / sqrt(n).",
+    "by_dataset": {
+      "NF-UNSW-NB15-v2": {
+        "gcp - gmp": {
+          "mde_80pct_power": 0.003964831996150977,
+          "observed_delta": 0.000467140396677701
+        },
+        "gcp - gap": {
+          "mde_80pct_power": 0.0034551567024064976,
+          "observed_delta": 0.004575350100826503
+        }
+      },
+      "NF-CSE-CIC-IDS2018-v2": {
+        "gcp - gmp": {
+          "mde_80pct_power": 0.0006182792357759204,
+          "observed_delta": 0.00026576731865692873
+        },
+        "gcp - gap": {
+          "mde_80pct_power": 0.0005929635506493244,
+          "observed_delta": 0.00044999107730516743
+        }
+      },
+      "NF-ToN-IoT-v2": {
+        "gcp - gmp": {
+          "mde_80pct_power": 0.004659021349215432,
+          "observed_delta": 0.0003053089499689632
+        },
+        "gcp - gap": {
+          "mde_80pct_power": 0.004748561084415583,
+          "observed_delta": 0.015882486635716165
+        }
+      },
+      "NF-BoT-IoT-v2": {
+        "gcp - gmp": {
+          "mde_80pct_power": 0.0024409787662612436,
+          "observed_delta": -0.00026905477797496414
+        },
+        "gcp - gap": {
+          "mde_80pct_power": 0.003273526641500618,
+          "observed_delta": 0.005178217348448722
+        }
+      }
+    }
+  },
+  "equivalence_bound": {
+    "NF-UNSW-NB15-v2": {
+      "gcp_minus_gmp_upper": 0.003428379367743059,
+      "gcp_minus_gap_gain": 0.004575350100826503,
+      "interval_excludes_whole_gain": true
+    },
+    "NF-CSE-CIC-IDS2018-v2": {
+      "gcp_minus_gmp_upper": 0.000727545414111555,
+      "gcp_minus_gap_gain": 0.00044999107730516743,
+      "interval_excludes_whole_gain": false
+    },
+    "NF-ToN-IoT-v2": {
+      "gcp_minus_gmp_upper": 0.003785021482483767,
+      "gcp_minus_gap_gain": 0.015882486635716165,
+      "interval_excludes_whole_gain": true
+    },
+    "NF-BoT-IoT-v2": {
+      "gcp_minus_gmp_upper": 0.0015540543618859483,
+      "gcp_minus_gap_gain": 0.005178217348448722,
+      "interval_excludes_whole_gain": true
+    }
+  },
+  "coupling_drop_smallest_family": {
+    "_why": "The manuscript states that dropping the one family whose gain rests on five test flows moves the headline coefficient and reverses the one positive variant. That claim previously had no producing file.",
+    "dropped": {
+      "dataset": "NF-CSE-CIC-IDS2018-v2",
+      "family": "injection"
+    },
+    "n_families_after_drop": 14,
+    "variants": {
+      "index_published": {
+        "pearson_r_all15": -0.35572660496077213,
+        "pearson_r_drop_smallest": -0.10660257732675922
+      },
+      "index_block_normalised": {
+        "pearson_r_all15": -0.37958972131326224,
+        "pearson_r_drop_smallest": -0.2126500592075685
+      },
+      "index_corrected": {
+        "pearson_r_all15": 0.16034302974977663,
+        "pearson_r_drop_smallest": -0.011285386766832193
+      },
+      "index_corrected_unnormalised": {
+        "pearson_r_all15": -0.14865984208483118,
+        "pearson_r_drop_smallest": -0.14264165321092165
+      }
+    }
+  },
+  "held_out_auc": {
+    "n_cells": 12,
+    "at_or_below_chance": 4,
+    "below_0_60": 9,
+    "by_dataset_head": {
+      "NF-UNSW-NB15-v2": {
+        "gap": 0.5714288078667082,
+        "gcp": 0.48970595394409244,
+        "gmp": 0.4186481116499998
+      },
+      "NF-CSE-CIC-IDS2018-v2": {
+        "gap": 0.5176888833187563,
+        "gcp": 0.6309190661062244,
+        "gmp": 0.5339109890751764
+      },
+      "NF-ToN-IoT-v2": {
+        "gap": 0.5215365855184672,
+        "gcp": 0.4750673749260276,
+        "gmp": 0.59185134292714
+      },
+      "NF-BoT-IoT-v2": {
+        "gap": 0.4885153072038526,
+        "gcp": 0.6386204310141136,
+        "gmp": 0.7547251135707768
+      }
+    }
+  }
+}
