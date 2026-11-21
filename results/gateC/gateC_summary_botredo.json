@@ -1,0 +1,75 @@
+{
+  "eranks": {
+    "NF-UNSW-NB15-v2": 12.828673096006007,
+    "NF-CSE-CIC-IDS2018-v2": 14.726713346610016,
+    "NF-ToN-IoT-v2": 14.100831465221288,
+    "NF-BoT-IoT-v2": 16.56052564128083
+  },
+  "deltas": {
+    "NF-UNSW-NB15-v2": 0.004575350100826503,
+    "NF-BoT-IoT-v2": 0.005178217348448722,
+    "NF-CSE-CIC-IDS2018-v2": 0.00044999107730516743,
+    "NF-ToN-IoT-v2": 0.015882486635716165
+  },
+  "pearson_r": -0.15083458809268932,
+  "delta_ci": {
+    "NF-UNSW-NB15-v2": [
+      0.004575350100826503,
+      0.001994775517026609,
+      0.007155924684626397
+    ],
+    "NF-BoT-IoT-v2": [
+      0.005178217348448722,
+      0.002733297948826519,
+      0.007623136748070925
+    ],
+    "NF-CSE-CIC-IDS2018-v2": [
+      0.00044999107730516743,
+      7.120666576872149e-06,
+      0.0008928614880334627
+    ],
+    "NF-ToN-IoT-v2": [
+      0.015882486635716165,
+      0.012335898998886477,
+      0.01942907427254585
+    ]
+  },
+  "delta_sources": {
+    "NF-UNSW-NB15-v2": {
+      "gcp": "results/repro",
+      "gap": "results/repro"
+    },
+    "NF-BoT-IoT-v2": {
+      "gcp": "results/botredo",
+      "gap": "results/botredo"
+    },
+    "NF-CSE-CIC-IDS2018-v2": {
+      "gcp": "results/gateC",
+      "gap": "results/gateC"
+    },
+    "NF-ToN-IoT-v2": {
+      "gcp": "results/gateC",
+      "gap": "results/gateC"
+    }
+  },
+  "previous": {
+    "deltas": {
+      "NF-UNSW-NB15-v2": 0.004575350100826658,
+      "NF-BoT-IoT-v2": 0.0038060821100696085,
+      "NF-CSE-CIC-IDS2018-v2": 0.0004499910773050342,
+      "NF-ToN-IoT-v2": 0.01588248663571612
+    },
+    "pearson_r": -0.23597256681387763,
+    "differs_only_in": [
+      "NF-BoT-IoT-v2"
+    ]
+  },
+  "_interval_method": "Student-t, df = n-1, two-sided 95 percent, sd with ddof=1",
+  "_supersedes": [
+    "results/gateC/gateC_summary.json",
+    "results/gateC/gateC_summary_tci.json (its BoT delta)"
+  ],
+  "_generated_by": "scripts/recompute_effective_rank_correlation.py",
+  "_reason": "ledger F04/B7: the stored BoT delta 0.0038 is from results/gap4; the published Table II reproduces from results/botredo (delta 0.0052), which gives r = -0.149, the value printed in the ICCIT paper",
+  "_note": "eranks are carried over from gateC_summary.json (training-feature statistic, unchanged)"
+}
